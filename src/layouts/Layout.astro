@@ -118,7 +118,7 @@
 
       <section class="bg-white">
         <div
-          class="max-w-screen-2xl px-4 py-10 space-y-4 mx-auto lg:py-16 flex flex-col lg:flex-row lg:items-center xl:gap-10"
+          class="xl:max-w-screen-2xl lg:mx-28 xl:px-2 lg:px-2 px-10 py-10 space-y-4 mx-auto lg:py-16 flex flex-col lg:flex-row lg:items-center xl:gap-10"
         >
           <div class="mr-auto">
             <h1
@@ -145,24 +145,24 @@
               Peça seu orçamento agora
             </a>
           </div>
-          <div class="flex-shrink-0 lg:flex lg:w-auto">
+          <div class="flex-1  lg:flex lg:w-auto">
             <img
               src="/public/imagens/Imagem.png"
               alt="Mockup"
-              class="sm:w-32 md:w-64 lg:w-auto lg:h-auto"
+              class="sm:w-48 sm:h-auto md:w-64 lg:w-auto lg:h-auto"
             />
           </div>
         </div>
       </section>
 
-      <section class="bg-[#FFE78B] mx-10 py-8 px-4 lg:px-10 lg:mx-48 rounded-3xl flex flex-col gap-5">
+      <section class="bg-[#FFE78B] mx-10 py-8 px-4 lg:px-10 lg:mx-28 rounded-3xl flex flex-col gap-5">
         <h2 class="font-bold text-xl lg:text-3xl text-center">
           <span class="text-blue-600">Simplificamos </span> a escolha de tintas e
           acabamentos para <br class="hidden lg:block" /> profissionais que buscam <span
             class="text-blue-600">excelência</span
           >.
         </h2>
-        <div class="flex flex-col lg:flex-row gap-5 lg:gap-x-56 mt-6 justify-center items-center">
+        <div class="flex flex-col lg:flex-row gap-5 lg:gap-x-40 mt-6 justify-center items-center">
           <div class="bg-[#F5C201] text-white space-y-3 text-left p-8 flex flex-col justify-center max-w-80 h-64 w-full lg:w-auto rounded-xl">
             <img class="w-8 h-8 flex mx-auto" src="/public/imagens/caminhao.png" alt="" />
             <h3 class="font-bold text-lg">Entrega em Até um Dia Útil</h3>
@@ -200,7 +200,7 @@
       </div>
 
       <section class="bg-white">
-        <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-2xl sm:grid-flow-col-dense lg:gap-20 lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+        <div class="gap-16 items-center lg:px-20 mx-8 py-8 px-4 max-w-screen-2xl sm:grid-flow-col-dense lg:gap-20 lg:grid lg:grid-cols-2 lg:py-16">
           <div class="grid grid-cols-2 gap-4 mt-8">
             <img
               class="w-full rounded-lg"
@@ -250,36 +250,35 @@
           </div>
         </div>
       </section>
-    </main>
 
-    <!-- 
-	<main>
-      
-      <section class="produtos" id="produtos">
-        <h2>Produtos mais Vendidos</h2>
-        <div class="produtos-items">
-          <div class="produto">
-            <img src="images/produto1.jpg" alt="NovaCor Paredes PRO" />
-            <p>NovaCor Paredes PRO</p>
+      <section class="flex flex-col items-center">
+        <h2 class="text-4xl text-blue-600 my-8 font-bold">Produtos mais Vendidos</h2>
+        <div class="mx-auto grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 gap-x-56 gap-y-20">
+          <div class="text-center space-y-4 px-40 py-10 max-w-96 flex flex-col rounded-xl justify-center items-center bg-blue-600">
+            <img class="w-full h-fit" src="/public/imagens/produto1.png" alt="NovaCor Paredes Pro" />
+            <p class="text-white font-semibold w-64">NovaCor Paredes PRO</p>
           </div>
-          <div class="produto">
-            <img src="images/produto2.jpg" alt="NovaCor Cobre Mais" />
-            <p>NovaCor Cobre Mais</p>
+          <div class="text-center space-y-4 px-40 py-10 max-w-96 flex flex-col rounded-xl justify-center items-center bg-blue-600">
+            <img class="w-full h-fit" src="/public/imagens/produto2.png" alt="NovaCor Cobre Mais" />
+            <p class="text-white font-semibold w-64">NovaCor Cobre Mais</p>
           </div>
-          <div class="produto">
-            <img src="images/produto3.jpg" alt="NovaCor Piso Premium" />
-            <p>NovaCor Piso Premium</p>
+          <div class="text-center space-y-4 px-40 py-10 max-w-96 flex flex-col rounded-xl justify-center items-center bg-blue-600">
+            <img class="w-full h-fit" src="/public/imagens/produto3.png" alt="NovaCor Piso Premium" />
+            <p class="text-white font-semibold w-64">NovaCor Piso Premium</p>
           </div>
-          <div class="produto">
-            <img src="images/produto4.jpg" alt="Metalatex Super Lavável" />
-            <p>Metalatex Super Lavável</p>
+          <div class="text-center space-y-4 px-40 py-10 max-w-96 flex flex-col rounded-xl justify-center items-center bg-blue-600">
+            <img class="w-full h-fit" src="/public/imagens/produto4.png" alt="Metalatex Super Lavável" />
+            <p class="text-white font-semibold w-64">Metalatex Super Lavável</p>
           </div>
         </div>
         <button onclick="window.location.href='#produtos'"
           >Quero conhecer mais os produtos</button
         >
       </section>
+    </main>
 
+    <!-- 
+	<main>
       <section class="depoimentos" id="depoimentos">
         <h2>O que dizem sobre nós</h2>
         <div class="depoimento">
