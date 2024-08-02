@@ -1,3 +1,7 @@
+---
+import Accordion from "../components/accordion.astro";
+---
+
 <!doctype html>
 <html lang="pt-br">
   <head>
@@ -37,7 +41,7 @@
     <main>
       <header>
         <nav class="bg-white border-gray-200 font-Poppins font-bold">
-          <div class="flex flex-1 items-center justify-around py-2">
+          <div class="flex flex-1 items-center gap-20 justify-around py-2">
             <a
               href="https://www.tintasimperio.com.br/"
               class="flex items-center space-x-3 rtl:space-x-reverse"
@@ -224,11 +228,7 @@
           <div
             class="bg-[#F5C201] text-white space-y-3 text-left p-8 flex flex-col justify-center max-w-80 h-64 w-full lg:w-auto rounded-xl"
           >
-            <img
-              class="w-8 h-8 flex mx-auto"
-              src="/imagens/caixa.png"
-              alt=""
-            />
+            <img class="w-8 h-8 flex mx-auto" src="/imagens/caixa.png" alt="" />
             <h3 class="font-bold text-lg">Produtos de Alta Qualidade</h3>
             <p class="text-white w-full lg:w-72">
               Trabalhamos com as melhores marcas do mercado, como a Sherwin
@@ -412,6 +412,30 @@
         </div>
       </section>
 
+      <section class="flex mt-16 flex-col gap-y-10 items-center justify-center">
+        <h2 class="text-4xl font-semibold text-blue-700">
+          Perguntas e Respostas
+        </h2>
+        <Accordion />
+      </section>
+
+      <section class="relative xl:max-w-[1420px] mx-auto my-20 mt-36 flex flex-col gap-y-10 p-10 rounded-xl justify-center items-center bg-[#FFE78B] overflow-visible">
+        <!-- Imagem com margem superior e ajuste no espaçamento -->
+        <img src="imagens/balde.png" alt="Balde de Tinta" class="absolute -top-20 left-1/2 transform -translate-x-1/2 w-32 md:w-40 lg:w-48 z-10" />
+        <h2 class="xl:text-3xl md:text-2xl text-2xl text-[#035AC1] text-center font-semibold mt-20"> <!-- Adicionei margin-top -->
+          Não Deixe a Tinta Secar e Venha Conhecer Uma de Nossas Lojas
+        </h2>
+        <p class="text-lg xl:text-xl xl:max-w-[600px] max-w-80 text-center text-[#00387B] mt-4"> <!-- Adicionei margin-top -->
+          Na Império das Tintas, temos tudo o que você precisa para transformar
+          seus ambientes com muita cor e estilo. <br />Com a gente, seu projeto
+          ganha vida rapidinho!
+        </p>
+        <button class="text-white font-semibold flex-1 rounded-md px-5 py-4 bg-[#035AC1] h-12 min-w-80 hover:scale-110 duration-100 mt-4"> <!-- Adicionei margin-top -->
+          <a href="#">Peça sua cotação gratuita agora!</a>
+        </button>
+      </section>
+      
+
       <footer class="bg-white text-[#262626]">
         <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div class="md:flex md:justify-between">
@@ -479,16 +503,19 @@
           />
           <div class="sm:flex sm:items-center sm:justify-between">
             <span
-              class="text-sm text-blue-500 sm:text-center flex justify-center "
-              > Império das Tintas - © 2024 Todos Direitos Reservados. Desenvolvido por <a href="https://constemarketing.com.br/" class="hover:underline hover:text-orange-500 duration-75"> Conste Marketing. </a>
+              class="text-sm text-blue-500 sm:text-center flex justify-center"
+            >
+              Império das Tintas - © 2024 Todos Direitos Reservados.
+              Desenvolvido por <a
+                href="https://constemarketing.com.br/"
+                class="hover:underline hover:text-orange-500 duration-75"
+                >Conste Marketing.
+              </a>
             </span>
             <div
               class="flex mt-4 sm:justify-center justify-between sm:mt-0 items-center gap-4"
             >
-              <a
-                href="#"
-                class="text-gray-500 hover:text-gray-900 "
-              >
+              <a href="#" class="text-gray-500 hover:text-gray-900">
                 <svg
                   width="24"
                   height="24"
@@ -577,68 +604,5 @@
         </div>
       </footer>
     </main>
-
-    <!-- 
-	<main>
-      <section class="depoimentos" id="depoimentos">
-        <h2>O que dizem sobre nós</h2>
-        <div class="depoimento">
-          <p>Fomos atendidos muito bem pelo pessoal...</p>
-          <p>- Luis E. Watanabe</p>
-        </div>
-      </section>
-
-      <section class="faq" id="faq">
-        <h2>Perguntas e Respostas</h2>
-        <div class="faq-item">
-          <h3>Quais tipos de tintas e acabamentos vocês oferecem?</h3>
-          <p>Oferecemos uma ampla variedade de tintas e acabamentos...</p>
-        </div>
-        <div class="faq-item">
-          <h3>
-            Vocês oferecem consultoria para escolha de tintas e acabamentos?
-          </h3>
-          <p>Sim, nossos especialistas estão prontos para ajudar...</p>
-        </div>
-        <div class="faq-item">
-          <h3>As lojas estão abertas nos finais de semana?</h3>
-          <p>Sim, estamos abertos aos sábados e domingos...</p>
-        </div>
-        <div class="faq-item">
-          <h3>Vocês oferecem serviços de aplicação de tintas?</h3>
-          <p>Sim, temos profissionais qualificados para a aplicação...</p>
-        </div>
-      </section>
-
-      <section class="cta-final" id="orcamento">
-        <h2>Não Deixe a Tinta Secar e Venha Conhecer Uma de Nossas Lojas</h2>
-        <p>Na Império das Tintas, temos tudo o que você precisa...</p>
-        <button onclick="window.location.href='#orcamento'"
-          >Peça seu orçamento gratuito agora!</button
-        >
-      </section>
-    </main> -->
-
-    <!-- <footer>
-      <div class="footer-content">
-        <p>
-          &copy; 2024 Império das Tintas - Todos Direitos Reservados.
-          Desenvolvido por Conste Marketing
-        </p>
-        <div class="footer-links">
-          <a href="#sobre-nos">Sobre Nós</a>
-          <a href="#produtos">Produtos</a>
-          <a href="#contato">Contato</a>
-        </div>
-        <div class="footer-social">
-          <a href="#"><img src="images/facebook-icon.png" alt="Facebook" /></a>
-          <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn" /></a>
-        </div>
-      </div>
-      <div class="footer-location">
-        <h3>Localização</h3>
-        <p>Endereço da loja...</p>
-      </div>
-    </footer> -->
   </body>
 </html>
