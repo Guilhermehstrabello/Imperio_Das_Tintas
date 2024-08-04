@@ -9,39 +9,20 @@ import Accordion from "../components/accordion.astro";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Império das Tintas</title>
     <style>
-      main {
-        margin: 0 30px;
-      }
-
       @media (min-width: 768px) {
         main {
           margin: 0 100px;
-        }
-        .card-container {
-          position: relative;
-          height: 500px; /* Ajuste a altura conforme necessário */
-        }
-        .card-left,
-        .card-right {
-          position: absolute;
-          width: 45%;
-        }
-        .card-left {
-          top: 0;
-          left: 0;
-        }
-        .card-right {
-          bottom: 0;
-          right: 0;
         }
       }
     </style>
   </head>
   <body>
-    <main>
+    <main class="flex flex-col items-center justify-center min-h-screen px-4">
       <header>
-        <nav class="bg-white border-gray-200 font-Poppins font-bold">
-          <div class="flex flex-1 items-center gap-20 justify-around py-2">
+        <nav class="bg-white border-gray-200 font-bold">
+          <div
+            class="flex items-center lg:text-base lg:gap-4 xl:mx-12 xl:gap-x-24 lg:justify-between xl:justify-center md:justify-between py-2"
+          >
             <a
               href="https://www.tintasimperio.com.br/"
               class="flex items-center space-x-3 rtl:space-x-reverse"
@@ -53,22 +34,22 @@ import Accordion from "../components/accordion.astro";
               />
             </a>
             <div
-              class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"
+              class="flex items-center md:justify-around space-x-4 md:space-x-10 rtl:space-x-reverse md:order-2"
             >
               <button
                 type="button"
-                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 font-medium rounded-lg text-sm px-4 py-2 text-center"
               >
                 <a href="#">Solicitar Orçamento</a>
               </button>
               <button
                 data-collapse-toggle="navbar-cta"
                 type="button"
-                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-blue-600 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2"
                 aria-controls="navbar-cta"
                 aria-expanded="false"
               >
-                <span class="sr-only">Open main menu</span>
+                <span class="sr-only">Abrir menu</span>
                 <svg
                   class="w-5 h-5"
                   aria-hidden="true"
@@ -86,73 +67,114 @@ import Accordion from "../components/accordion.astro";
               </button>
             </div>
             <div
-              class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+              class="items-center justify-center hidden w-auto lg:flex lg:w-auto md:order-1"
               id="navbar-cta"
             >
               <ul
-                class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white"
+                class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:space-x-20 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0 lg:bg-white"
               >
                 <li>
                   <a
                     href="#"
-                    class="block py-2 px-3 md:p-0 text-[#262626] rounded md:bg-transparent hover:text-blue-700"
+                    class="block py-2 px-3 lg:p-0 text-[#262626] rounded lg:bg-transparent hover:text-blue-700"
+                    >Sobre Nós</a
                   >
-                    Sobre Nós
-                  </a>
                 </li>
                 <li>
                   <a
                     href="#"
-                    class="block py-2 px-3 md:p-0 text-[#262626] rounded md:bg-transparent hover:text-blue-700"
+                    class="block py-2 px-3 lg:p-0 text-[#262626] rounded lg:bg-transparent hover:text-blue-700"
+                    >Por que Nós</a
                   >
-                    Produtos
-                  </a>
                 </li>
                 <li>
                   <a
                     href="#"
-                    class="block py-2 px-3 md:p-0 text-[#262626] rounded md:bg-transparent hover:text-blue-700"
+                    class="block py-2 px-3 lg:p-0 text-[#262626] rounded lg:bg-transparent hover:text-blue-700"
+                    >Depoimentos</a
                   >
-                    Por que Nós
-                  </a>
                 </li>
                 <li>
                   <a
                     href="#"
-                    class="block py-2 px-3 md:p-0 text-[#262626] rounded md:bg-transparent hover:text-blue-700"
+                    class="block py-2 px-3 lg:p-0 text-[#262626] rounded lg:bg-transparent hover:text-blue-700"
+                    >FAQ</a
                   >
-                    Depoimentos
-                  </a>
                 </li>
                 <li>
                   <a
                     href="#"
-                    class="block py-2 px-3 md:p-0 text-[#262626] rounded md:bg-transparent hover:text-blue-700"
+                    class="block py-2 px-3 lg:p-0 text-[#262626] rounded lg:bg-transparent hover:text-blue-700"
+                    >Contato</a
                   >
-                    FAQ
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="block py-2 px-3 md:p-0 text-[#262626] rounded md:bg-transparent hover:text-blue-700"
-                  >
-                    Contato
-                  </a>
                 </li>
               </ul>
             </div>
           </div>
+          <div class="hidden lg:hidden" id="navbar-cta-mobile">
+            <ul
+              class="flex flex-col font-medium p-4 mt-4 border border-blue-100 items-center rounded-lg rtl:space-x-reverse"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-[#262626] rounded hover:text-blue-700"
+                  >Sobre Nós</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-[#262626] rounded hover:text-blue-700"
+                  >Por que Nós</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-[#262626] rounded hover:text-blue-700"
+                  >Depoimentos</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-[#262626] rounded hover:text-blue-700"
+                  >FAQ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-[#262626] rounded hover:text-blue-700"
+                  >Contato</a
+                >
+              </li>
+            </ul>
+          </div>
         </nav>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const toggleButton = document.querySelector(
+              '[data-collapse-toggle="navbar-cta"]'
+            );
+            const mobileMenu = document.getElementById("navbar-cta-mobile");
+
+            toggleButton.addEventListener("click", function () {
+              mobileMenu.classList.toggle("hidden");
+            });
+          });
+        </script>
       </header>
 
       <section class="bg-white">
         <div
-          class="xl:max-w-screen-2xl lg:mx-28 xl:px-2 lg:px-2 px-10 py-10 space-y-4 mx-auto lg:py-16 flex flex-col lg:flex-row lg:items-center xl:gap-10"
+          class="xl:max-w-screen-2xl lg:max-w-screen-xl lg:mx-6 xl:px-8 lg:px-2 px-10 py-10 space-y-4 mx-auto lg:py-16 flex flex-col lg:flex-row lg:items-center xl:gap-10"
         >
-          <div class="mr-auto">
+          <div>
             <h1
-              class="max-w-2xl mb-4 text-4xl font-bold tracking-tight leading-none md:text-5xl xl:text-5xl text-[#262626]"
+              class="xl:max-w-2xl mb-4 text-3xl xl:text-5xl lg:text-5xl font-bold tracking-tight leading-none text-[#262626]"
             >
               Transforme Seus Espaços <br /> com as <span
                 class="text-yellow-400"
@@ -161,7 +183,7 @@ import Accordion from "../components/accordion.astro";
               </span> e Acabamentos de Valinhos
             </h1>
             <p
-              class="max-w-2xl mb-6 font-light text-[#262626] lg:mb-8 md:text-lg lg:text-xl"
+              class="max-w-2xl mb-6 font-light text-[#262626] lg:mb-8 md:text-base lg:text-xl"
             >
               Entregamos em até um <span class="text-blue-500"> dia útil </span>
               caso você seja da <span class="text-blue-500">
@@ -170,12 +192,12 @@ import Accordion from "../components/accordion.astro";
             </p>
             <a
               href="#"
-              class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white rounded-lg bg-blue-600 focus:ring-4 focus:ring-primary-300 hover:scale-110 duration-100"
+              class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white rounded-lg bg-blue-600 hover:scale-110 duration-75"
             >
               Peça seu orçamento agora
             </a>
           </div>
-          <div class="flex-1 lg:flex lg:w-auto">
+          <div class="flex-1 lg:flex lg:w-full">
             <img
               src="/imagens/Imagem.png"
               alt="Mockup"
@@ -186,7 +208,7 @@ import Accordion from "../components/accordion.astro";
       </section>
 
       <section
-        class="bg-[#FFE78B] mx-10 py-8 px-4 lg:px-10 lg:mx-28 rounded-3xl flex flex-col gap-5"
+        class="bg-[#FFE78B] max-w-[1500px] flex flex-col py-12 px-4 lg:px-14 lg:mx-10 rounded-3xl gap-5"
       >
         <h2 class="font-bold text-xl lg:text-3xl text-center">
           <span class="text-blue-600">Simplificamos </span> a escolha de tintas e
@@ -194,10 +216,10 @@ import Accordion from "../components/accordion.astro";
           <span class="text-blue-600">excelência</span>.
         </h2>
         <div
-          class="flex flex-col lg:flex-row gap-5 lg:gap-x-24 mt-6 justify-center items-center"
+          class="flex flex-col lg:flex-row gap-5 xl:gap-x-20 mt-6 justify-center items-center"
         >
           <div
-            class="bg-[#F5C201] text-white space-y-3 text-left p-8 flex flex-col justify-center max-w-80 h-64 w-full lg:w-auto rounded-xl"
+            class="bg-[#F5C201] text-white space-y-3 text-left p-8 flex flex-col justify-center max-w-80 h-64 w-full lg:w-auto rounded-xl hover:scale-110 duration-100"
           >
             <img
               class="w-8 h-8 flex mx-auto"
@@ -211,7 +233,7 @@ import Accordion from "../components/accordion.astro";
             </p>
           </div>
           <div
-            class="bg-[#F5C201] text-white space-y-3 text-left p-8 flex flex-col justify-center max-w-80 h-64 w-full lg:w-auto rounded-xl"
+            class="bg-[#F5C201] text-white space-y-3 text-left p-8 flex flex-col justify-center max-w-80 h-64 w-full lg:w-auto rounded-xl hover:scale-110 duration-100"
           >
             <img
               class="w-8 h-8 flex mx-auto"
@@ -226,7 +248,7 @@ import Accordion from "../components/accordion.astro";
             </p>
           </div>
           <div
-            class="bg-[#F5C201] text-white space-y-3 text-left p-8 flex flex-col justify-center max-w-80 h-64 w-full lg:w-auto rounded-xl"
+            class="bg-[#F5C201] text-white space-y-3 text-left p-8 flex flex-col justify-center max-w-80 h-64 w-full lg:w-auto rounded-xl hover:scale-110 duration-100"
           >
             <img class="w-8 h-8 flex mx-auto" src="/imagens/caixa.png" alt="" />
             <h3 class="font-bold text-lg">Produtos de Alta Qualidade</h3>
@@ -248,7 +270,7 @@ import Accordion from "../components/accordion.astro";
 
       <section class="bg-white">
         <div
-          class="gap-16 items-center lg:px-20 mx-8 py-8 px-4 max-w-screen-2xl sm:grid-flow-col-dense lg:gap-20 lg:grid lg:grid-cols-2 lg:py-16"
+          class="gap-16 items-center lg:px-2 mx-8 py-8 px-4 xl:max-w-screen-3xl grid-flow-col-dense lg:gap-24 lg:grid lg:grid-cols-2 lg:py-16"
         >
           <div class="grid grid-cols-2 gap-4 mt-8">
             <img
@@ -306,265 +328,251 @@ import Accordion from "../components/accordion.astro";
         </div>
       </section>
 
-      <section class="flex flex-col items-center">
-        <h2 class="text-4xl text-blue-600 my-8 font-bold">
-          Produtos mais Vendidos
-        </h2>
-        <div
-          class="mx-auto grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 gap-x-56 gap-y-20"
-        >
-          <div
-            class="text-center space-y-4 px-40 py-10 max-w-96 flex flex-col rounded-xl justify-center items-center bg-blue-600"
-          >
+      <section
+        class="flex flex-col justify-center items-center mx-auto gap-y-10 p-8"
+      >
+        <div class="space-y-10">
+          <h2 class="text-2xl text-center font-bold text-blue-600">
+            Revendedores oficiais da Sherwin Williams
+          </h2>
+          <div class="bg-blue-700 rounded-lg px-6 py-10">
             <img
-              class="w-full h-fit"
-              src="/imagens/produto1.png"
-              alt="NovaCor Paredes Pro"
+              src="/imagens/SherwinWilliams.png"
+              alt="Produtos Sherwin Williams"
+              class="w-[480px] h-auto"
             />
-            <p class="text-white font-semibold w-64">NovaCor Paredes PRO</p>
-          </div>
-          <div
-            class="text-center space-y-4 px-40 py-10 max-w-96 flex flex-col rounded-xl justify-center items-center bg-blue-600"
-          >
-            <img
-              class="w-full h-fit"
-              src="/imagens/produto2.png"
-              alt="NovaCor Cobre Mais"
-            />
-            <p class="text-white font-semibold w-64">NovaCor Cobre Mais</p>
-          </div>
-          <div
-            class="text-center space-y-4 px-40 py-10 max-w-96 flex flex-col rounded-xl justify-center items-center bg-blue-600"
-          >
-            <img
-              class="w-full h-fit"
-              src="/imagens/produto3.png"
-              alt="NovaCor Piso Premium"
-            />
-            <p class="text-white font-semibold w-64">NovaCor Piso Premium</p>
-          </div>
-          <div
-            class="text-center space-y-4 px-40 py-10 max-w-96 flex flex-col rounded-xl justify-center items-center bg-blue-600"
-          >
-            <img
-              class="w-full h-fit"
-              src="/imagens/produto4.png"
-              alt="Metalatex Super Lavável"
-            />
-            <p class="text-white font-semibold w-64">Metalatex Super Lavável</p>
           </div>
         </div>
-        <button
-          class="text-white font-semibold flex-1 rounded-md px-5 py-3 my-16 bg-blue-700 h-12 w-80 hover:scale-110 duration-100"
-          onclick="window.location.href='#produtos'"
-          >Quero conhecer mais os produtos</button
-        >
-      </section>
-      <section class="container mx-auto p-8">
-        <!-- Seção com Cards Alinhados -->
-        <div class="relative card-container flex flex-col md:flex-row">
-          <!-- Card com conteúdo sobre Sherwin Williams (esquerda em telas grandes) -->
-          <div class="p-6 rounded-lg mb-4 md:mb-0 md:w-1/2 card-left">
-            <h2 class="text-2xl font-bold text-blue-600">
-              Revendedores oficiais da Sherwin Williams
-            </h2>
-            <div class="bg-blue-700 flex justify-center p-4 rounded-md mt-4">
-              <img
-                src="/imagens/SherwinWilliams.png"
-                alt="Produtos Sherwin Williams"
-                class="w-[480px] h-auto"
-              />
-            </div>
-          </div>
-          <!-- Card com depoimento (direita em telas grandes) -->
-          <div class="p-6 rounded-lg md:w-1/2 card-right">
-            <h2 class="text-2xl font-bold text-blue-600">
-              O que dizem sobre nós
-            </h2>
-            <div class="bg-blue-700 p-10 rounded-md text-white mt-4">
+        <div class="flex flex-col space-y-10">
+          <h2 class="text-2xl font-bold text-blue-600">O que dizem sobre nós</h2>
+          <div class="flex flex-wrap gap-4">
+            <div class="bg-blue-700 flex-1 max-w-xs p-6 rounded-md text-white">
               <div class="flex items-center mb-2">
-                <img
-                  src="/path/to/avatar.jpg"
-                  alt="Luis E. Watanabe"
-                  class="w-10 h-10 rounded-full mr-2"
-                />
+                <img src="/path/to/avatar.jpg" alt="Luis E. Watanabe" class="w-10 h-10 rounded-full mr-2" />
                 <span class="font-bold">Luis E. Watanabe</span>
               </div>
               <p>
-                Fomos atendidos muito bem pelo pessoal, perguntamos e tivemos
-                ótimas respostas nos produtos, etc....vale a pena conhecer e
-                fazer cotações.....
+                Fomos atendidos muito bem pelo pessoal, perguntamos e tivemos ótimas respostas nos produtos, etc..vale a pena conhecer e fazer cotações...
               </p>
-              <div class="flex justify-end gap-2 mt-4">
-                <button
-                  class="bg-blue-600 hover:bg-blue-400 duration-100 text-white py-2 px-2 rounded-full"
-                >
-                  <img src="/imagens/Arrow 10.png" alt="setinha" />
-                </button>
-                <button
-                  class="bg-blue-600 hover:bg-blue-400 duration-100 text-white py-2 px-2 rounded-full"
-                >
-                  <img src="/imagens/Arrow 11.png" alt="setinha" />
-                </button>
+            </div>
+            <div class="bg-blue-700 flex-1 max-w-xs p-6 rounded-md text-white">
+              <div class="flex items-center mb-2">
+                <img src="/path/to/avatar.jpg" alt="Luis E. Watanabe" class="w-10 h-10 rounded-full mr-2" />
+                <span class="font-bold">Luis E. Watanabe</span>
               </div>
+              <p>
+                Fomos atendidos muito bem pelo pessoal, perguntamos e tivemos ótimas respostas nos produtos, etc..vale a pena conhecer e fazer cotações...
+              </p>
+            </div>
+            <div class="bg-blue-700 flex-1 max-w-xs p-6 rounded-md text-white">
+              <div class="flex items-center mb-2">
+                <img src="/path/to/avatar.jpg" alt="Luis E. Watanabe" class="w-10 h-10 rounded-full mr-2" />
+                <span class="font-bold">Luis E. Watanabe</span>
+              </div>
+              <p>
+                Fomos atendidos muito bem pelo pessoal, perguntamos e tivemos ótimas respostas nos produtos, etc..vale a pena conhecer e fazer cotações...
+              </p>
+            </div>
+            <div class="bg-blue-700 flex-1 max-w-xs p-6 rounded-md text-white">
+              <div class="flex items-center mb-2">
+                <img src="/path/to/avatar.jpg" alt="Luis E. Watanabe" class="w-10 h-10 rounded-full mr-2" />
+                <span class="font-bold">Luis E. Watanabe</span>
+              </div>
+              <p>
+                Fomos atendidos muito bem pelo pessoal, perguntamos e tivemos ótimas respostas nos produtos, etc..vale a pena conhecer e fazer cotações...
+              </p>
             </div>
           </div>
         </div>
-      </section>
-
-      <section class="flex mt-16 flex-col gap-y-10 items-center justify-center">
-        <h2 class="text-4xl font-semibold text-blue-700">
-          Perguntas e Respostas
-        </h2>
-        <Accordion />
-      </section>
-
-      <section
-        class="relative xl:max-w-[1420px] mx-auto my-20 mt-36 flex flex-col gap-y-10 p-10 rounded-xl justify-center items-center bg-[#FFE78B] overflow-visible"
-      >
-        <!-- Imagem com margem superior e ajuste no espaçamento -->
-        <img
-          src="imagens/balde.png"
-          alt="Balde de Tinta"
-          class="absolute -top-20 left-1/2 transform -translate-x-1/2 w-32 md:w-40 lg:w-48 z-10"
-        />
-        <h2
-          class="xl:text-3xl md:text-2xl text-2xl text-[#035AC1] text-center font-semibold mt-20"
-        >
-          <!-- Adicionei margin-top -->
-          Não Deixe a Tinta Secar e Venha Conhecer Uma de Nossas Lojas
-        </h2>
-        <p
-          class="text-lg xl:text-xl xl:max-w-[600px] max-w-80 text-center text-[#00387B] mt-4"
-        >
-          <!-- Adicionei margin-top -->
-          Na Império das Tintas, temos tudo o que você precisa para transformar seus
-          ambientes com muita cor e estilo. <br />Com a gente, seu projeto ganha
-          vida rapidinho!
-        </p>
-        <button
-          class="text-white font-semibold flex-1 rounded-md px-5 py-4 bg-[#035AC1] h-12 min-w-80 hover:scale-110 duration-100 mt-4"
-        >
-          <!-- Adicionei margin-top -->
-          <a href="#">Peça sua cotação gratuita agora!</a>
-        </button>
-      </section>
-
-      <footer class="bg-white text-[#262626] flex justify-center items-center max-w-[1560px] mx-auto px-6">
-        <div class="gap-y-10 md:text-center text-center items-start grid grid-cols-1 md:grid-cols-3 xl:justify-center xl:space-x-44 md:space-x-10 mx-10 mb-5 w-full">
-          <div class="flex flex-col gap-5 text-center xl:items-start items-center">
-            <img class="w-20 h-12" src="/imagens/logo.png" alt="Logo Império das Tintas" />
-            <p class="text-[#035AC1] max-w-md text-start row-span-2">
-              Guiados por valores de justiça, honestidade e excelência,
-              garantimos que cada projeto receba a atenção e os produtos de alta
-              qualidade que você merece.
-            </p>
-            <div
-              class="flex mt-4 justify-start sm:mt-0 items-end gap-4"
-            >
-              <a class="hover:scale-150 duration-75" href="#">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_48_1272)">
-                    <path
-                      d="M9.78669 19V12.4308H7.99976V10.0656H9.78669V8.04535C9.78669 6.45785 10.8422 5 13.2745 5C14.2592 5 14.9874 5.09177 14.9874 5.09177L14.93 7.30049C14.93 7.30049 14.1874 7.29347 13.377 7.29347C12.4999 7.29347 12.3594 7.68638 12.3594 8.33851V10.0656H14.9998L14.8849 12.4308H12.3594V19H9.78669Z"
-                      fill="#035AC1"></path>
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_48_1272">
-                      <rect
-                        width="7"
-                        height="14"
-                        fill="white"
-                        transform="translate(7.99976 5)"></rect>
-                    </clipPath>
-                  </defs>
-                </svg>
-
-                <span class="sr-only">Facebook</span>
-              </a>
-              <a class="hover:scale-150 duration-75" href="#">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_48_1276)">
-                    <path
-                      d="M12.0036 7.95683C9.73213 7.95683 7.89999 9.76035 7.89999 11.9963C7.89999 14.2322 9.73213 16.0357 12.0036 16.0357C14.275 16.0357 16.1071 14.2322 16.1071 11.9963C16.1071 9.76035 14.275 7.95683 12.0036 7.95683ZM12.0036 14.6225C10.5357 14.6225 9.3357 13.4447 9.3357 11.9963C9.3357 10.5478 10.5321 9.37011 12.0036 9.37011C13.475 9.37011 14.6714 10.5478 14.6714 11.9963C14.6714 13.4447 13.4714 14.6225 12.0036 14.6225ZM17.2321 7.7916C17.2321 8.31543 16.8036 8.73379 16.275 8.73379C15.7428 8.73379 15.3178 8.31191 15.3178 7.7916C15.3178 7.27129 15.7464 6.84941 16.275 6.84941C16.8036 6.84941 17.2321 7.27129 17.2321 7.7916ZM19.95 8.74785C19.8893 7.48574 19.5964 6.36777 18.6571 5.44668C17.7214 4.52559 16.5857 4.2373 15.3036 4.17402C13.9821 4.1002 10.0214 4.1002 8.69999 4.17402C7.42142 4.23379 6.28571 4.52207 5.34642 5.44316C4.40714 6.36426 4.11785 7.48222 4.05356 8.74433C3.97856 10.0451 3.97856 13.9439 4.05356 15.2447C4.11428 16.5068 4.40714 17.6248 5.34642 18.5459C6.28571 19.467 7.41785 19.7553 8.69999 19.8185C10.0214 19.8924 13.9821 19.8924 15.3036 19.8185C16.5857 19.7588 17.7214 19.4705 18.6571 18.5459C19.5928 17.6248 19.8857 16.5068 19.95 15.2447C20.025 13.9439 20.025 10.0486 19.95 8.74785ZM18.2428 16.6404C17.9643 17.3295 17.425 17.8603 16.7214 18.1381C15.6678 18.5494 13.1678 18.4545 12.0036 18.4545C10.8393 18.4545 8.3357 18.5459 7.2857 18.1381C6.58571 17.8639 6.04642 17.333 5.76428 16.6404C5.34642 15.6033 5.44285 13.1424 5.44285 11.9963C5.44285 10.8502 5.34999 8.38574 5.76428 7.35215C6.04285 6.66308 6.58213 6.13223 7.2857 5.85449C8.33928 5.44316 10.8393 5.53809 12.0036 5.53809C13.1678 5.53809 15.6714 5.44668 16.7214 5.85449C17.4214 6.12871 17.9607 6.65957 18.2428 7.35215C18.6607 8.38926 18.5643 10.8502 18.5643 11.9963C18.5643 13.1424 18.6607 15.6068 18.2428 16.6404Z"
-                      fill="#035AC1"></path>
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_48_1276">
-                      <rect
-                        width="16"
-                        height="18"
-                        fill="white"
-                        transform="translate(4 3)"></rect>
-                    </clipPath>
-                  </defs>
-                </svg>
-
-                <span class="sr-only">Instagram</span>
-              </a>
-              <a class="hover:scale-150 duration-75" href="#">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_48_1280)">
-                    <path
-                      d="M7.63269 19V8.87953H4.20239V19H7.63269ZM5.91798 7.49692C7.11419 7.49692 7.85877 6.71978 7.85877 5.74862C7.83648 4.75556 7.11423 4 5.94068 4C4.76731 4 4 4.75558 4 5.74862C4 6.71983 4.7444 7.49692 5.89559 7.49692H5.91787H5.91798ZM9.53135 19H12.9617V13.3482C12.9617 13.0458 12.9839 12.7436 13.0745 12.5274C13.3225 11.923 13.8869 11.2971 14.8345 11.2971C16.0758 11.2971 16.5724 12.2252 16.5724 13.5857V18.9999H20.0025V13.1969C20.0025 10.0883 18.3101 8.64193 16.0532 8.64193C14.2027 8.64193 13.3902 9.65626 12.9388 10.3471H12.9617V8.87932H9.53143C9.57644 9.82897 9.53143 18.9998 9.53143 18.9998L9.53135 19Z"
-                      fill="#035AC1"></path>
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_48_1280">
-                      <rect
-                        width="16"
-                        height="15"
-                        fill="white"
-                        transform="translate(4 4)"></rect>
-                    </clipPath>
-                  </defs>
-                </svg>
-                <span class="sr-only">Linkedin</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="flex flex-col gap-5 text-center xl:text-start ">
-            <h3 class="text-[#035AC1] font-bold text-xl">Links</h3>
-            <a href="#sobre"><p class="text-[#035AC1] hover:underline hover:scale-110 duration-75">Sobre nós</p>
-            </a>
-            <a href="#produtos"><p class="text-[#035AC1] hover:underline hover:scale-110 duration-75">Produtos</p>
-            </a>
-            <a href="#porque"><p class="text-[#035AC1] hover:underline hover:scale-110 duration-75">Por que Nós</p>
-            </a>
-            <a href="#depoimentos"><p class="text-[#035AC1] hover:underline hover:scale-110 duration-75">Depoimentos</p>
-            </a>
-            <a href="#faq"><p class="text-[#035AC1] hover:underline hover:scale-110 duration-75">FAQ</p>
-            </a>
-            <a href="#contato"><p class="text-[#035AC1] hover:underline hover:scale-110 duration-75">Contato</p>
-            </a>
-          </div>
-           <div class="flex flex-col gap-5 text-center xl:text-start text-xl">
-            <h3 class="text-[#035AC1] font-bold">Localização</h3>
-            <a href="#">
-              <img class="w-full h-full hover:scale-105 duration-75" src="/imagens/localizacao.png" alt="Imagem Google Maps">
-            </a>
-          </div>
+        
         </div>
-      </footer>
+      </section>
     </main>
+
+    <section class="flex mt-16 flex-col gap-y-10 items-center justify-center">
+      <h2 class="text-4xl font-semibold text-blue-700">
+        Perguntas e Respostas
+      </h2>
+      <Accordion />
+    </section>
+
+    <section
+      class="relative xl:max-w-[1420px] mx-auto my-20 mt-36 flex flex-col gap-y-10 p-10 rounded-xl justify-center items-center bg-[#FFE78B] overflow-visible"
+    >
+      <img
+        src="imagens/balde.png"
+        alt="Balde de Tinta"
+        class="absolute -top-20 left-1/2 transform -translate-x-1/2 w-32 md:w-40 lg:w-48 z-10"
+      />
+      <h2
+        class="xl:text-3xl md:text-2xl text-2xl text-[#035AC1] text-center font-semibold mt-20"
+      >
+        Não Deixe a Tinta Secar e Venha Conhecer Uma de Nossas Lojas
+      </h2>
+      <p
+        class="text-lg xl:text-xl xl:max-w-[600px] max-w-80 text-center text-[#00387B] mt-4"
+      >
+        Na Império das Tintas, temos tudo o que você precisa para transformar
+        seus ambientes com muita cor e estilo. <br />Com a gente, seu projeto
+        ganha vida rapidinho!
+      </p>
+      <button
+        class="text-white font-semibold flex-1 rounded-md px-5 py-4 bg-[#035AC1] h-12 min-w-80 hover:scale-110 duration-100 mt-4"
+      >
+        <a href="#">Peça sua cotação gratuita agora!</a>
+      </button>
+    </section>
+
+    <footer
+      class="bg-white text-[#262626] flex justify-center items-center max-w-[1560px] mx-auto px-6"
+    >
+      <div
+        class="gap-y-10 md:text-center text-center items-start grid grid-cols-1 md:grid-cols-3 xl:justify-center xl:space-x-44 md:space-x-10 mx-10 mb-5 w-full"
+      >
+        <div
+          class="flex flex-col gap-5 text-center xl:items-start items-center"
+        >
+          <a href="https://www.tintasimperio.com.br/">
+            <img
+              class="w-20 h-12"
+              src="/imagens/logo.png"
+              alt="Logo Império das Tintas"
+            />
+          </a>
+          <p class="text-[#035AC1] max-w-md text-start row-span-2">
+            Guiados por valores de justiça, honestidade e excelência, garantimos
+            que cada projeto receba a atenção e os produtos de alta qualidade
+            que você merece.
+          </p>
+          <div class="flex mt-4 justify-start sm:mt-0 items-end gap-4">
+            <a class="hover:scale-150 duration-75" href="#">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_48_1272)">
+                  <path
+                    d="M9.78669 19V12.4308H7.99976V10.0656H9.78669V8.04535C9.78669 6.45785 10.8422 5 13.2745 5C14.2592 5 14.9874 5.09177 14.9874 5.09177L14.93 7.30049C14.93 7.30049 14.1874 7.29347 13.377 7.29347C12.4999 7.29347 12.3594 7.68638 12.3594 8.33851V10.0656H14.9998L14.8849 12.4308H12.3594V19H9.78669Z"
+                    fill="#035AC1"></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_48_1272">
+                    <rect
+                      width="7"
+                      height="14"
+                      fill="white"
+                      transform="translate(7.99976 5)"></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+
+              <span class="sr-only">Facebook</span>
+            </a>
+            <a class="hover:scale-150 duration-75" target="_blank" href="https://www.instagram.com/imperio_das_tintas_oficial/">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_48_1276)">
+                  <path
+                    d="M12.0036 7.95683C9.73213 7.95683 7.89999 9.76035 7.89999 11.9963C7.89999 14.2322 9.73213 16.0357 12.0036 16.0357C14.275 16.0357 16.1071 14.2322 16.1071 11.9963C16.1071 9.76035 14.275 7.95683 12.0036 7.95683ZM12.0036 14.6225C10.5357 14.6225 9.3357 13.4447 9.3357 11.9963C9.3357 10.5478 10.5321 9.37011 12.0036 9.37011C13.475 9.37011 14.6714 10.5478 14.6714 11.9963C14.6714 13.4447 13.4714 14.6225 12.0036 14.6225ZM17.2321 7.7916C17.2321 8.31543 16.8036 8.73379 16.275 8.73379C15.7428 8.73379 15.3178 8.31191 15.3178 7.7916C15.3178 7.27129 15.7464 6.84941 16.275 6.84941C16.8036 6.84941 17.2321 7.27129 17.2321 7.7916ZM19.95 8.74785C19.8893 7.48574 19.5964 6.36777 18.6571 5.44668C17.7214 4.52559 16.5857 4.2373 15.3036 4.17402C13.9821 4.1002 10.0214 4.1002 8.69999 4.17402C7.42142 4.23379 6.28571 4.52207 5.34642 5.44316C4.40714 6.36426 4.11785 7.48222 4.05356 8.74433C3.97856 10.0451 3.97856 13.9439 4.05356 15.2447C4.11428 16.5068 4.40714 17.6248 5.34642 18.5459C6.28571 19.467 7.41785 19.7553 8.69999 19.8185C10.0214 19.8924 13.9821 19.8924 15.3036 19.8185C16.5857 19.7588 17.7214 19.4705 18.6571 18.5459C19.5928 17.6248 19.8857 16.5068 19.95 15.2447C20.025 13.9439 20.025 10.0486 19.95 8.74785ZM18.2428 16.6404C17.9643 17.3295 17.425 17.8603 16.7214 18.1381C15.6678 18.5494 13.1678 18.4545 12.0036 18.4545C10.8393 18.4545 8.3357 18.5459 7.2857 18.1381C6.58571 17.8639 6.04642 17.333 5.76428 16.6404C5.34642 15.6033 5.44285 13.1424 5.44285 11.9963C5.44285 10.8502 5.34999 8.38574 5.76428 7.35215C6.04285 6.66308 6.58213 6.13223 7.2857 5.85449C8.33928 5.44316 10.8393 5.53809 12.0036 5.53809C13.1678 5.53809 15.6714 5.44668 16.7214 5.85449C17.4214 6.12871 17.9607 6.65957 18.2428 7.35215C18.6607 8.38926 18.5643 10.8502 18.5643 11.9963C18.5643 13.1424 18.6607 15.6068 18.2428 16.6404Z"
+                    fill="#035AC1"></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_48_1276">
+                    <rect
+                      width="16"
+                      height="18"
+                      fill="white"
+                      transform="translate(4 3)"></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+
+              <span class="sr-only">Instagram</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-5 text-center xl:text-start">
+          <h3 class="text-[#035AC1] font-bold text-xl">Seções</h3>
+          <a href="#sobre"
+            ><p
+              class="text-[#035AC1] hover:underline hover:scale-110 duration-75"
+            >
+              Sobre nós
+            </p>
+          </a>
+          <a href="#porque"
+            ><p
+              class="text-[#035AC1] hover:underline hover:scale-110 duration-75"
+            >
+              Por que Nós
+            </p>
+          </a>
+          <a href="#depoimentos"
+            ><p
+              class="text-[#035AC1] hover:underline hover:scale-110 duration-75"
+            >
+              Depoimentos
+            </p>
+          </a>
+          <a href="#faq"
+            ><p
+              class="text-[#035AC1] hover:underline hover:scale-110 duration-75"
+            >
+              FAQ
+            </p>
+          </a>
+          <a href="#contato"
+            ><p
+              class="text-[#035AC1] hover:underline hover:scale-110 duration-75"
+            >
+              Contato
+            </p>
+          </a>
+        </div>
+
+        <div class="flex flex-col gap-5 text-center xl:text-start text-xl">
+          <h3 class="text-[#035AC1] font-bold">Localização</h3>
+          <a
+            target="_blank"
+            href="https://www.google.com.br/maps/place/Imp%C3%A9rio+das+Tintas+Valinhos/@-22.9748723,-46.9990395,19.84z/data=!4m6!3m5!1s0x94c8cd668a50ed6b:0x42e37a903726a910!8m2!3d-22.9747084!4d-46.9989216!16s%2Fg%2F11syrmtn62?entry=ttu"
+          >
+            <img
+              class="w-full h-full hover:scale-105 duration-75"
+              src="/imagens/localizacao.png"
+              alt="Imagem Google Maps"
+            />
+          </a>
+          <a
+            target="_blank"
+            href="https://www.google.com.br/maps/place/Imp%C3%A9rio+das+Tintas+Valinhos/@-22.9748723,-46.9990395,19.84z/data=!4m6!3m5!1s0x94c8cd668a50ed6b:0x42e37a903726a910!8m2!3d-22.9747084!4d-46.9989216!16s%2Fg%2F11syrmtn62?entry=ttu"
+          >
+            <p class="text-[#035AC1] text-sm duration-75 hover:underline">
+              Endereço: n° 500 - Av. dos Esportes, n° 500 - Vila Bissoto,
+              Valinhos - SP, 13270-210
+            </p>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <div class="flex justify-center items-center mx-auto my-8">
+      <p class="text-center text-[#035AC1] text-sm">
+        Império das Tintas - 2024 Todos Direitos Reservados. Desenvolvido por
+        <a
+          href="http://constemarketing.com.br"
+          target="_blank"
+          class="hover:text-[#FF8500] duration-75 hover:underline"
+          >Conste Marketing.</a
+        >
+      </p>
+    </div>
   </body>
 </html>
