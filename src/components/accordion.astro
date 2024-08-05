@@ -3,7 +3,7 @@ const faqs = [
   { question: "Quais tipos de tintas e acabamentos vocês oferecem?", answer: "Oferecemos uma ampla variedade de tintas e acabamentos, incluindo tintas para interiores, exteriores, esmaltes, vernizes e linhas especiais para pisos. Nossos produtos são escolhidos para garantir durabilidade e qualidade em todos os projetos." },
   { question: "Vocês oferecem consultoria para escolha dos produtos?", answer: "Sim, nós ajudamos você a encontrar as tintas ou produtos que você realmente precisa para o seu projeto. Não vamos prejudicar você e o seu trabalho, iremos ajudar." },
   { question: "As lojas estão abertas nos finais de semana?", answer: "Nosso horário de funcionamento são, de Segunda a Sexta, das 07:30 às 17:30 e aos Sábados das 08:00 às 12:00. Não abrimos aos Domingos." },
-  { question: "Vocês oferecem serviços de aplicação de tintas?", answer: "Nós não vendemos serviços, apenas os produtos, mas podemos indicar nossos pintores de confiança para você caso você queira uma aplicação profissional para o seu projeto." },
+  { question: "Vocês oferecem serviços de aplicação de tintas?", answer: "Não, nós não vendemos nenhum tipo de serviço, apenas produtos, mas podemos indicar nossos pintores de confiança para você caso você queira uma aplicação profissional para o seu projeto." },
 ];
 ---
 
@@ -21,10 +21,10 @@ const faqs = [
   }
 </style>
 
-<div class="xl:w-[1420px] lg:w-[1020px] md:min-w-[780px] sm:min-w-[310px] flex flex-col rounded-md justify-center p-6 bg-[#FFF6D3]">
+<div class="xl:w-[1200px] 2xl:w-[1490px] lg:w-[1020px] min-w-[310px] mx-auto flex flex-col rounded-md justify-center px-6 py-4 bg-[#FFF6D3]">
   {faqs.map((faq, index) => (
     <details class="accordion-item border-b border-gray-200 py-2 mb-2 last:mb-0">
-      <summary class="flex items-center justify-between cursor-pointer xl:text-[28px] text-lg font-semibold gap-x-10 py-2 px-4">
+      <summary class="flex items-center xl:justify-between justify-center cursor-pointer xl:text-[24px] text-base font-semibold gap-x-10 py-2 px-4">
         <span class="flex items-center">
           <span class="w-6 h-6 xl:text-3xl text-2xl space-x-6 flex items-center text-center rounded-full mr-10">0{index + 1}</span>
           {faq.question}
@@ -33,7 +33,7 @@ const faqs = [
           <path fill-rule="evenodd" d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
         </svg>
       </summary>
-      <p class="mt-2 xl:text-xl text-base px-4">{faq.answer}</p>
+      <p class="mt-2 xl:text-lg text-base px-4">{faq.answer}</p>
     </details>
   ))}
 </div>
