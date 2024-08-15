@@ -2,7 +2,6 @@
 import Accordion from "../components/accordion.astro";
 ---
 
-
 <!doctype html>
 <html lang="pt-br">
   <head>
@@ -12,7 +11,7 @@ import Accordion from "../components/accordion.astro";
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <link rel="icon" href="/favicon.svg" type="image/x-icon">
+    <link rel="icon" href="/favicon.svg" type="image/x-icon" />
     <title>Império das Tintas</title>
     <style>
       @media (min-width: 768px) {
@@ -53,7 +52,7 @@ import Accordion from "../components/accordion.astro";
       <header>
         <nav class="bg-white border-gray-200 font-bold">
           <div
-            class="flex flex-col items-center justify-center 2xl:justify-between xl:justify-between xl:space-x-36 lg:flex-row lg:justify-center lg:text-base py-2"
+            class="flex flex-col items-center justify-center lg:flex-row lg:justify-between lg:space-x-36 py-2"
           >
             <a
               href="https://www.tintasimperio.com.br/"
@@ -66,7 +65,7 @@ import Accordion from "../components/accordion.astro";
               />
             </a>
             <div
-              class="flex items-center md:justify-around space-x-4 md:space-x-10 rtl:space-x-reverse md:order-2"
+              class="flex items-center space-x-4 rtl:space-x-reverse lg:space-x-10 md:order-2 lg:order-2"
             >
               <a
                 target="_blank"
@@ -74,7 +73,7 @@ import Accordion from "../components/accordion.astro";
               >
                 <button
                   type="button"
-                  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 font-medium rounded-lg text-sm px-4 py-2 text-center 2xl:visible xl:visible lg:visible invisible"
+                  class="text-white bg-blue-700 hover:scale-105 hover:bg-blue-800 duration-75 focus:ring-4 focus:outline-none focus:ring-blue-200 font-medium rounded-lg text-sm px-4 py-2 text-center lg:visible lg:inline-flex hidden"
                 >
                   Solicitar Orçamento
                 </button>
@@ -82,13 +81,13 @@ import Accordion from "../components/accordion.astro";
               <button
                 data-collapse-toggle="navbar-cta"
                 type="button"
-                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-blue-600 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-blue-600 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 order-2 mt-4 lg:mt-0"
                 aria-controls="navbar-cta"
                 aria-expanded="false"
               >
                 <span class="sr-only">Abrir menu</span>
                 <svg
-                  class="w-5 h-5"
+                  class="w-14 h-14"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -104,7 +103,7 @@ import Accordion from "../components/accordion.astro";
               </button>
             </div>
             <div
-              class="items-center justify-center hidden w-auto lg:flex lg:w-auto md:order-1"
+              class="items-center justify-center hidden w-auto lg:flex lg:w-auto"
               id="navbar-cta"
             >
               <ul
@@ -150,7 +149,7 @@ import Accordion from "../components/accordion.astro";
           </div>
           <div class="hidden lg:hidden" id="navbar-cta-mobile">
             <ul
-              class="flex flex-col font-medium p-4 mt-4 border border-blue-100 items-center rounded-lg rtl:space-x-reverse"
+              class="flex text-xl flex-col justify-center font-medium p-4 mt-4 border border-blue-100 items-center rounded-lg rtl:space-x-reverse"
             >
               <li>
                 <a
@@ -232,7 +231,7 @@ import Accordion from "../components/accordion.astro";
               href="https://api.whatsapp.com/send?phone=5519995820350&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20seus%20produtos!!"
             >
               <button
-                class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white rounded-lg bg-blue-600 hover:scale-110 duration-75"
+                class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:scale-105 hover:bg-blue-800 duration-75"
               >
                 Peça seu orçamento agora
               </button>
@@ -242,7 +241,7 @@ import Accordion from "../components/accordion.astro";
             <img
               src="/imagens/Imagem.png"
               alt="Mockup"
-              class="sm:w-48 sm:h-auto md:w-64 lg:w-auto lg:h-auto"
+              class="sm:w-48 sm:h-auto md:w-64 lg:w-auto lg:h-auto hover:scale-110 duration-150"
             />
           </div>
         </div>
@@ -307,7 +306,7 @@ import Accordion from "../components/accordion.astro";
           href="https://api.whatsapp.com/send?phone=5519995820350&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20seus%20produtos!!"
         >
           <button
-            class="text-white font-semibold flex justify-center items-center rounded-md px-5 py-4 bg-blue-700 h-12 w-52 hover:scale-110 duration-100"
+            class="text-white font-semibold flex justify-center items-center rounded-md px-5 py-4 h-12 w-52 bg-blue-700 hover:scale-105 hover:bg-blue-800 duration-75"
           >
             Entre em Contato
           </button>
@@ -320,22 +319,22 @@ import Accordion from "../components/accordion.astro";
         >
           <div class="grid grid-cols-2 gap-4 mt-8">
             <img
-              class="w-full rounded-lg"
+              class="w-full rounded-lg hover:scale-110 duration-150"
               src="/imagens/1fotoloja.png"
               alt="office content 1"
             />
             <img
-              class="mt-4 w-full lg:mt-10 rounded-lg"
+              class="mt-4 w-full lg:mt-10 rounded-lg hover:scale-110 duration-150"
               src="/imagens/2fotoloja.png"
               alt="office content 2"
             />
             <img
-              class="w-full h-full rounded-lg"
+              class="w-full h-full rounded-lg hover:scale-110 duration-150"
               src="/imagens/3fotoloja.png"
               alt="office content 1"
             />
             <img
-              class="mt-4 w-full h-auto lg:mt-10 rounded-lg"
+              class="mt-4 w-full h-auto lg:mt-10 rounded-lg hover:scale-110 duration-150"
               src="/imagens/4fotoloja.png"
               alt="office content 2"
             />
@@ -370,7 +369,7 @@ import Accordion from "../components/accordion.astro";
               href="https://api.whatsapp.com/send?phone=5519995820350&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20seus%20produtos!!"
             >
               <button
-                class="text-white font-semibold flex justify-center items-center rounded-md px-5 py-4 bg-blue-700 h-12 w-52 hover:scale-110 duration-100"
+                class="text-white font-semibold flex justify-center items-center rounded-md px-5 py-4 h-12 w-52 bg-blue-700 hover:scale-105 hover:bg-blue-800 duration-75"
               >
                 Entre em Contato
               </button>
@@ -386,11 +385,11 @@ import Accordion from "../components/accordion.astro";
           <h2 class="text-2xl 2xl:text-3xl xl:text-3xl font-bold text-blue-600">
             Revendedores oficiais da Sherwin Williams
           </h2>
-          <div class="bg-blue-700 rounded-lg px-6 py-10">
+          <div class="bg-blue-700 flex justify-center items-center rounded-lg px-6 py-10">
             <img
               src="/imagens/SherwinWilliams.png"
               alt="Produtos Sherwin Williams"
-              class="w-[480px] h-auto"
+              class="w-[480px] h-auto hover:scale-110 duration-150"
             />
           </div>
         </div>
@@ -491,7 +490,7 @@ import Accordion from "../components/accordion.astro";
           href="https://api.whatsapp.com/send?phone=5519995820350&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20seus%20produtos!!"
         >
           <button
-            class="text-white font-semibold flex items-center justify-center rounded-md px-5 py-4 bg-[#035AC1] h-12 lg:min-w-80 w-auto hover:scale-110 duration-100 mt-4"
+            class="text-white font-semibold flex items-center justify-center rounded-md px-5 py-4 bg-blue-700 hover:scale-105 hover:bg-blue-800 duration-75 h-12 lg:min-w-80 w-auto mt-4"
           >
             Peça sua cotação agora!
           </button>
