@@ -23,6 +23,7 @@ import Accordion from "../components/accordion.astro";
         }
       });
     </script>
+    <link rel="preload" as="image" href="/imagens/Hero.avif" />
     <link rel="icon" href="/favicon.svg" type="image/x-icon" />
     <title>Império das Tintas</title>
     <style>
@@ -73,7 +74,7 @@ import Accordion from "../components/accordion.astro";
             });
         });
       </script>
-      
+
       <header>
         <nav class="bg-white border-gray-200 font-bold">
           <div
@@ -264,9 +265,10 @@ import Accordion from "../components/accordion.astro";
           </div>
           <div class="flex-1 lg:flex lg:w-full">
             <img
-              loading="lazy"
               src="/imagens/Hero.avif"
               alt="Mockup"
+              width="500"
+              height="300"
               class="sm:w-48 sm:h-auto md:w-64 lg:w-auto lg:h-auto hover:scale-110 duration-150"
             />
           </div>
