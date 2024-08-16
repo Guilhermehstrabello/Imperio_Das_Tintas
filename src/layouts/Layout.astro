@@ -29,9 +29,12 @@ import Accordion from "../components/accordion.astro";
       html {
         scroll-behavior: smooth;
       }
+      body{
+        background-color: white;
+      }
     </style>
     <!-- Google Tag Manager -->
-    <script is:inline async>
+    <script is:inline defer>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
@@ -261,9 +264,9 @@ import Accordion from "../components/accordion.astro";
             <img
               src="/imagens/Hero.avif"
               alt="Mockup"
-              width="500"
-              height="300"
-              class="sm:w-48 sm:h-auto md:w-64 lg:w-auto lg:h-auto hover:scale-110 duration-150"
+              width="600"
+              height="400"
+              class="sm:w-48 sm:h-auto md:w-64 md:h-auto lg:w-auto lg:h-auto"
             />
           </div>
         </div>
@@ -548,7 +551,7 @@ import Accordion from "../components/accordion.astro";
             class="bg-[#25D366] hover:bg-[#20c157] text-white py-3 px-3 rounded-full shadow-lg"
             aria-label="Whatsapp Flutuante"
           >
-            <img src="imagens/whatsapp.svg" class="w-full h-full"/>
+            <img src="imagens/whatsapp.svg" alt="Whatsapp flutuante" class="w-full h-full"/>
           </button>
         </a>
       </div>
