@@ -8,9 +8,16 @@ import Accordion from "../components/accordion.astro";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      rel="stylesheet"
+      rel="preload"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
+      as="style"
+      onload="this.rel='stylesheet'"
+    /><noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      /></noscript
+    >
     <link rel="icon" href="/favicon.svg" type="image/x-icon" />
     <title>Império das Tintas</title>
     <style>
@@ -24,7 +31,7 @@ import Accordion from "../components/accordion.astro";
       }
     </style>
     <!-- Google Tag Manager -->
-    <script is:inline>
+    <script is:inline async>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
@@ -42,6 +49,7 @@ import Accordion from "../components/accordion.astro";
     <!-- Google Tag Manager (noscript) -->
     <noscript>
       <iframe
+        loading="lazy"
         src="https://www.googletagmanager.com/ns.html?id=GTM-5PHHS7KR"
         height="0"
         width="0"
@@ -49,6 +57,13 @@ import Accordion from "../components/accordion.astro";
     >
     <!-- End Google Tag Manager (noscript) -->
     <main class="flex flex-col items-center justify-center min-h-screen px-4">
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          document.querySelector('[data-collapse-toggle="navbar-cta"]').addEventListener("click", () => {
+            document.getElementById("navbar-cta-mobile").classList.toggle("hidden");
+          });
+        });
+      </script>
       <header>
         <nav class="bg-white border-gray-200 font-bold">
           <div
@@ -59,6 +74,7 @@ import Accordion from "../components/accordion.astro";
               class="flex items-center space-x-3 rtl:space-x-reverse"
             >
               <img
+                loading="lazy"
                 src="/imagens/logo.png"
                 class="h-12 w-[85px]"
                 alt="Império das Tintas Logo"
@@ -111,6 +127,7 @@ import Accordion from "../components/accordion.astro";
               >
                 <li>
                   <a
+                    aria-current="page"
                     href="#sobre"
                     class="block py-2 px-3 lg:p-0 text-[#262626] rounded lg:bg-transparent hover:text-blue-700"
                     >Sobre Nós</a
@@ -118,6 +135,7 @@ import Accordion from "../components/accordion.astro";
                 </li>
                 <li>
                   <a
+                    aria-current="page"
                     href="#porque"
                     class="block py-2 px-3 lg:p-0 text-[#262626] rounded lg:bg-transparent hover:text-blue-700"
                     >Por que Nós</a
@@ -125,6 +143,7 @@ import Accordion from "../components/accordion.astro";
                 </li>
                 <li>
                   <a
+                    aria-current="page"
                     href="#depoimentos"
                     class="block py-2 px-3 lg:p-0 text-[#262626] rounded lg:bg-transparent hover:text-blue-700"
                     >Depoimentos</a
@@ -132,6 +151,7 @@ import Accordion from "../components/accordion.astro";
                 </li>
                 <li>
                   <a
+                    aria-current="page"
                     href="#faq"
                     class="block py-2 px-3 lg:p-0 text-[#262626] rounded lg:bg-transparent hover:text-blue-700"
                     >FAQ</a
@@ -139,6 +159,7 @@ import Accordion from "../components/accordion.astro";
                 </li>
                 <li>
                   <a
+                    aria-current="page"
                     href="#contato"
                     class="block py-2 px-3 lg:p-0 text-[#262626] rounded lg:bg-transparent hover:text-blue-700"
                     >Contato</a
@@ -153,6 +174,7 @@ import Accordion from "../components/accordion.astro";
             >
               <li>
                 <a
+                  aria-current="page"
                   href="#sobre"
                   class="block py-2 px-3 text-[#262626] rounded hover:text-blue-700"
                   >Sobre Nós</a
@@ -160,6 +182,7 @@ import Accordion from "../components/accordion.astro";
               </li>
               <li>
                 <a
+                  aria-current="page"
                   href="#porque"
                   class="block py-2 px-3 text-[#262626] rounded hover:text-blue-700"
                   >Por que Nós</a
@@ -167,6 +190,7 @@ import Accordion from "../components/accordion.astro";
               </li>
               <li>
                 <a
+                  aria-current="page"
                   href="#depoimentos"
                   class="block py-2 px-3 text-[#262626] rounded hover:text-blue-700"
                   >Depoimentos</a
@@ -174,6 +198,7 @@ import Accordion from "../components/accordion.astro";
               </li>
               <li>
                 <a
+                  aria-current="page"
                   href="#faq"
                   class="block py-2 px-3 text-[#262626] rounded hover:text-blue-700"
                   >FAQ</a
@@ -181,6 +206,7 @@ import Accordion from "../components/accordion.astro";
               </li>
               <li>
                 <a
+                  aria-current="page"
                   href="#contato"
                   class="block py-2 px-3 text-[#262626] rounded hover:text-blue-700"
                   >Contato</a
@@ -221,8 +247,10 @@ import Accordion from "../components/accordion.astro";
             <p
               class="max-w-2xl mb-6 font-light text-[#262626] lg:mb-8 md:text-base lg:text-xl"
             >
-              Entregamos em até um <span class="text-blue-500"> dia útil </span>
-              caso você seja da <span class="text-blue-500">
+              Entregamos em até um <span class="text-blue-500 font-bold">
+                dia útil
+              </span>
+              caso você seja da <span class="text-blue-500 font-bold">
                 região de valinhos</span
               >. Atendimento e produtos de excelência para o seu espaço.
             </p>
@@ -239,7 +267,8 @@ import Accordion from "../components/accordion.astro";
           </div>
           <div class="flex-1 lg:flex lg:w-full">
             <img
-              src="/imagens/Imagem.png"
+              loading="lazy"
+              src="/imagens/Hero.png"
               alt="Mockup"
               class="sm:w-48 sm:h-auto md:w-64 lg:w-auto lg:h-auto hover:scale-110 duration-150"
             />
@@ -259,40 +288,47 @@ import Accordion from "../components/accordion.astro";
           class="flex flex-col lg:flex-row gap-5 xl:gap-x-20 mt-6 justify-center items-center"
         >
           <div
-            class="bg-[#F5C201] text-white space-y-3 text-left p-8 flex flex-col justify-center max-w-80 h-64 w-full lg:w-auto rounded-xl hover:scale-110 duration-100"
+            class="bg-[#F5C201] text-black space-y-3 text-left p-8 flex flex-col justify-center max-w-80 h-64 w-full lg:w-auto rounded-xl hover:scale-110 duration-100"
           >
             <img
+              loading="lazy"
               class="w-8 h-8 flex mx-auto"
-              src="/imagens/caminhao.png"
+              src="/imagens/caminhao.svg"
               alt=""
             />
             <h3 class="font-bold text-lg">Entrega em Até um Dia Útil</h3>
-            <p class="text-white w-full lg:w-72">
+            <p class="text-black w-full lg:w-72">
               Garantimos que suas tintas e acabamentos cheguem até você
               rapidamente, para que seus projetos nunca fiquem parados.
             </p>
           </div>
           <div
-            class="bg-[#F5C201] text-white space-y-3 text-left p-8 flex flex-col justify-center max-w-80 h-64 w-full lg:w-auto rounded-xl hover:scale-110 duration-100"
+            class="bg-[#F5C201] text-black space-y-3 text-left p-8 flex flex-col justify-center max-w-80 h-64 w-full lg:w-auto rounded-xl hover:scale-110 duration-100"
           >
             <img
+              loading="lazy"
               class="w-8 h-8 flex mx-auto"
-              src="/imagens/telefone.png"
+              src="/imagens/telefone.svg"
               alt=""
             />
             <h3 class="font-bold text-lg">Atendimento Personalizado</h3>
-            <p class="text-white w-full lg:w-72">
+            <p class="text-black w-full lg:w-72">
               Estamos prontos para oferecer um atendimento diferenciado,
               ajudando você a encontrar as melhores soluções para suas
               necessidades.
             </p>
           </div>
           <div
-            class="bg-[#F5C201] text-white space-y-3 text-left p-8 flex flex-col justify-center max-w-80 h-64 w-full lg:w-auto rounded-xl hover:scale-110 duration-100"
+            class="bg-[#F5C201] text-black space-y-3 text-left p-8 flex flex-col justify-center max-w-80 h-64 w-full lg:w-auto rounded-xl hover:scale-110 duration-100"
           >
-            <img class="w-8 h-8 flex mx-auto" src="/imagens/caixa.png" alt="" />
+            <img
+              loading="lazy"
+              class="w-8 h-8 flex mx-auto"
+              src="/imagens/caixa.svg"
+              alt="Icone caixa"
+            />
             <h3 class="font-bold text-lg">Produtos de Alta Qualidade</h3>
-            <p class="text-white w-full lg:w-72">
+            <p class="text-black w-full lg:w-72">
               Trabalhamos com as melhores marcas do mercado, como a Sherwin
               Williams, garantindo produtos de alta performance e durabilidade.
             </p>
@@ -385,7 +421,9 @@ import Accordion from "../components/accordion.astro";
           <h2 class="text-2xl 2xl:text-3xl xl:text-3xl font-bold text-blue-600">
             Revendedores oficiais da Sherwin Williams
           </h2>
-          <div class="bg-blue-700 flex justify-center items-center rounded-lg px-6 py-10">
+          <div
+            class="bg-blue-700 flex justify-center items-center rounded-lg px-6 py-10"
+          >
             <img
               src="/imagens/SherwinWilliams.png"
               alt="Produtos Sherwin Williams"
@@ -488,7 +526,7 @@ import Accordion from "../components/accordion.astro";
         <a
           target="_blank"
           href="https://api.whatsapp.com/send?phone=5519995820350&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20seus%20produtos!!"
-        > 
+        >
           <button
             class="text-white font-semibold flex items-center justify-center rounded-md px-5 py-4 bg-blue-700 hover:scale-105 hover:bg-blue-800 duration-75 h-12 lg:min-w-80 w-auto"
           >
@@ -536,7 +574,11 @@ import Accordion from "../components/accordion.astro";
               qualidade que você merece.
             </p>
             <div class="flex mt-4 justify-start sm:mt-0 items-end gap-4">
-              <a class="hover:scale-150 duration-75" target="_blank" href="https://www.facebook.com/profile.php?id=61563645035180&mibextid=ZbWKwL">
+              <a
+                class="hover:scale-150 duration-75"
+                target="_blank"
+                href="https://www.facebook.com/profile.php?id=61563645035180&mibextid=ZbWKwL"
+              >
                 <svg
                   width="24"
                   height="24"
