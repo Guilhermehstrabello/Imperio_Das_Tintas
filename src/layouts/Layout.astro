@@ -8,16 +8,21 @@ import Accordion from "../components/accordion.astro";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      id="preload-css"
       rel="preload"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       as="style"
-      onload="this.rel='stylesheet'"
-    /><noscript
-      ><link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      /></noscript
-    >
+    />
+
+    <!-- Script para alterar o rel para stylesheet após o carregamento -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const linkElement = document.getElementById("preload-css");
+        if (linkElement instanceof HTMLLinkElement) {
+          linkElement.rel = "stylesheet";
+        }
+      });
+    </script>
     <link rel="icon" href="/favicon.svg" type="image/x-icon" />
     <title>Império das Tintas</title>
     <style>
@@ -59,9 +64,13 @@ import Accordion from "../components/accordion.astro";
     <main class="flex flex-col items-center justify-center min-h-screen px-4">
       <script>
         document.addEventListener("DOMContentLoaded", () => {
-          document.querySelector('[data-collapse-toggle="navbar-cta"]').addEventListener("click", () => {
-            document.getElementById("navbar-cta-mobile").classList.toggle("hidden");
-          });
+          document
+            .querySelector('[data-collapse-toggle="navbar-cta"]')
+            .addEventListener("click", () => {
+              document
+                .getElementById("navbar-cta-mobile")
+                .classList.toggle("hidden");
+            });
         });
       </script>
       <header>
@@ -75,7 +84,7 @@ import Accordion from "../components/accordion.astro";
             >
               <img
                 loading="lazy"
-                src="/imagens/logo.png"
+                src="/imagens/logo.avif"
                 class="h-12 w-[85px]"
                 alt="Império das Tintas Logo"
               />
@@ -268,7 +277,7 @@ import Accordion from "../components/accordion.astro";
           <div class="flex-1 lg:flex lg:w-full">
             <img
               loading="lazy"
-              src="/imagens/Hero.png"
+              src="/imagens/Hero.avif"
               alt="Mockup"
               class="sm:w-48 sm:h-auto md:w-64 lg:w-auto lg:h-auto hover:scale-110 duration-150"
             />
@@ -356,22 +365,22 @@ import Accordion from "../components/accordion.astro";
           <div class="grid grid-cols-2 gap-4 mt-8">
             <img
               class="w-full rounded-lg hover:scale-110 duration-150"
-              src="/imagens/1fotoloja.png"
+              src="/imagens/1fotoloja.avif"
               alt="office content 1"
             />
             <img
               class="mt-4 w-full lg:mt-10 rounded-lg hover:scale-110 duration-150"
-              src="/imagens/2fotoloja.png"
+              src="/imagens/2fotoloja.avif"
               alt="office content 2"
             />
             <img
               class="w-full h-full rounded-lg hover:scale-110 duration-150"
-              src="/imagens/3fotoloja.png"
+              src="/imagens/3fotoloja.avif"
               alt="office content 1"
             />
             <img
               class="mt-4 w-full h-auto lg:mt-10 rounded-lg hover:scale-110 duration-150"
-              src="/imagens/4fotoloja.png"
+              src="/imagens/4fotoloja.avif"
               alt="office content 2"
             />
           </div>
@@ -425,7 +434,7 @@ import Accordion from "../components/accordion.astro";
             class="bg-blue-700 flex justify-center items-center rounded-lg px-6 py-10"
           >
             <img
-              src="/imagens/SherwinWilliams.png"
+              src="/imagens/SherwinWilliams.avif"
               alt="Produtos Sherwin Williams"
               class="w-[480px] h-auto hover:scale-110 duration-150"
             />
@@ -507,7 +516,7 @@ import Accordion from "../components/accordion.astro";
         class="relative 2xl:w-[1480px] xl:w-[1200px] mx-4 h-[600px] xl:p-0 my-20 mt-44 mb-44 flex flex-col gap-y-10 rounded-xl justify-center items-center bg-[#FFE78B] overflow-visible"
       >
         <img
-          src="imagens/balde.png"
+          src="imagens/balde.avif"
           alt="Balde de Tinta"
           class="absolute -top-20 left-1/2 transform -translate-x-1/2 w-32 md:w-40 lg:w-48 z-10"
         />
@@ -562,7 +571,7 @@ import Accordion from "../components/accordion.astro";
             <a href="https://www.tintasimperio.com.br/">
               <img
                 class="w-20 h-12 hover:scale-110 duration-75"
-                src="/imagens/logo.png"
+                src="/imagens/logo.avif"
                 alt="Logo Império das Tintas"
               />
             </a>
@@ -684,7 +693,7 @@ import Accordion from "../components/accordion.astro";
             >
               <img
                 class="w-full h-full lg:mx-0 mx-4 hover:scale-105 duration-75"
-                src="/imagens/localizacao.png"
+                src="/imagens/localizacao.avif"
                 alt="Imagem Google Maps"
               />
             </a>
