@@ -73,6 +73,7 @@ import Accordion from "../components/accordion.astro";
             });
         });
       </script>
+      
       <header>
         <nav class="bg-white border-gray-200 font-bold">
           <div
@@ -224,19 +225,6 @@ import Accordion from "../components/accordion.astro";
             </ul>
           </div>
         </nav>
-
-        <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            const toggleButton = document.querySelector(
-              '[data-collapse-toggle="navbar-cta"]'
-            );
-            const mobileMenu = document.getElementById("navbar-cta-mobile");
-
-            toggleButton.addEventListener("click", function () {
-              mobileMenu.classList.toggle("hidden");
-            });
-          });
-        </script>
       </header>
 
       <section class="bg-white">
