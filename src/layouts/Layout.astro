@@ -354,24 +354,32 @@ import Accordion from "../components/accordion.astro";
         >
           <div class="grid grid-cols-2 gap-4 mt-8">
             <img
-              class="w-full rounded-lg hover:scale-110 duration-150"
+              class="w-full h-full rounded-lg hover:scale-110 duration-150"
               src="/imagens/1fotoloja.avif"
               alt="office content 1"
+              width="full"
+              height="full"
             />
             <img
-              class="mt-4 w-full lg:mt-10 rounded-lg hover:scale-110 duration-150"
+              class="mt-4 w-full h-auto lg:mt-10 rounded-lg hover:scale-110 duration-150"
               src="/imagens/2fotoloja.avif"
               alt="office content 2"
+              width="full"
+              height="auto"
             />
             <img
               class="w-full h-full rounded-lg hover:scale-110 duration-150"
               src="/imagens/3fotoloja.avif"
               alt="office content 1"
+              width="full"
+              height="full"
             />
             <img
               class="mt-4 w-full h-auto lg:mt-10 rounded-lg hover:scale-110 duration-150"
               src="/imagens/4fotoloja.avif"
               alt="office content 2"
+              width="full"
+              height="auto"
             />
           </div>
 
@@ -424,6 +432,7 @@ import Accordion from "../components/accordion.astro";
             class="bg-blue-700 flex justify-center items-center rounded-lg px-6 py-10"
           >
             <img
+              loading="lazy"
               src="/imagens/SherwinWilliams.avif"
               alt="Produtos Sherwin Williams"
               class="w-[480px] h-auto hover:scale-110 duration-150"
@@ -506,6 +515,7 @@ import Accordion from "../components/accordion.astro";
         class="relative 2xl:w-[1480px] xl:w-[1200px] mx-4 h-[600px] xl:p-0 my-20 mt-44 mb-44 flex flex-col gap-y-10 rounded-xl justify-center items-center bg-[#FFE78B] overflow-visible"
       >
         <img
+          loading="lazy"
           src="imagens/balde.avif"
           alt="Balde de Tinta"
           class="absolute -top-20 left-1/2 transform -translate-x-1/2 w-32 md:w-40 lg:w-48 z-10"
@@ -682,6 +692,7 @@ import Accordion from "../components/accordion.astro";
               href="https://www.google.com.br/maps/place/Imp%C3%A9rio+das+Tintas+Valinhos/@-22.9748723,-46.9990395,19.84z/data=!4m6!3m5!1s0x94c8cd668a50ed6b:0x42e37a903726a910!8m2!3d-22.9747084!4d-46.9989216!16s%2Fg%2F11syrmtn62?entry=ttu"
             >
               <img
+                loading="lazy"
                 class="w-full h-full lg:mx-0 mx-4 hover:scale-105 duration-75"
                 src="/imagens/localizacao.avif"
                 alt="Imagem Google Maps"
