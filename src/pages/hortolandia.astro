@@ -92,7 +92,13 @@ import Header from "../components/header.astro";
         Seu navegador não suporta a tag de vídeo.
       </video>
 
-      <div class="absolute inset-0 bg-black opacity-50"></div>
+      <div class="absolute inset-0 bg-black opacity-50">
+        <!-- Fade Branco Superior -->
+        <div
+          class="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-[#e5e7eb] to-black"
+        >
+        </div>
+      </div>
 
       <div class="relative z-10 flex flex-col items-center gap-12">
         <h1
