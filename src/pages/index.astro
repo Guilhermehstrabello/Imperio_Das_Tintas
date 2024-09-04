@@ -12,6 +12,17 @@ const pageTitle = "Império das Tintas";
       href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.1/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <style>
+      /* Animação de fade-in */
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      .fade-in {
+        animation: fadeIn 1.5s ease-in-out;
+      }
+    </style>
     <!-- Script para alterar o rel para stylesheet após o carregamento -->
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -19,6 +30,11 @@ const pageTitle = "Império das Tintas";
         if (linkElement instanceof HTMLLinkElement) {
           linkElement.rel = "stylesheet";
         }
+
+        // Adicionando a classe fade-in aos elementos após o carregamento
+        document.querySelectorAll('.fade-in').forEach(element => {
+          element.classList.add('opacity-100');
+        });
       });
     </script>
     <link rel="preload" as="image" href="/imagens/Hero.avif" />
@@ -28,49 +44,49 @@ const pageTitle = "Império das Tintas";
     class="bg-[#035AC1] m-0 font-sans flex items-center justify-center h-screen"
   >
     <div
-      class="relative w-full h-full flex flex-col items-center justify-center p-4 sm:p-8"
+      class="relative w-full h-full flex flex-col items-center justify-center p-4 sm:p-8 fade-in opacity-0"
     >
       <!-- Bordas -->
-      <div class="absolute top-0 left-0 w-24 md:w-32 lg:w-40">
+      <div class="absolute top-0 left-0 w-16 sm:w-24 lg:w-32 fade-in opacity-0">
         <img src="imagens/brush1.svg" alt="Brush1">
       </div>
 
-      <div class="absolute top-0 right-0 w-24 md:w-32 lg:w-40">
+      <div class="absolute top-0 right-0 w-16 sm:w-24 lg:w-32 fade-in opacity-0">
         <img src="imagens/brush2.svg" alt="Brush2">
       </div>
-      <div class="absolute bottom-0 left-0 w-24 md:w-32 lg:w-40">
+      <div class="absolute bottom-0 left-0 w-16 sm:w-24 lg:w-32 fade-in opacity-0">
         <img src="imagens/brush2.svg" alt="Brush2">
       </div>
 
-      <div class="absolute bottom-0 right-0 w-24 md:w-32 lg:w-40">
+      <div class="absolute bottom-0 right-0 w-16 sm:w-24 lg:w-32 fade-in opacity-0">
         <img src="imagens/brush3.svg" alt="Brush3">
       </div>
 
       <!-- Links com imagem de fundo ao passar o mouse -->
       <a
         href="/valinhos"
-        class="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-4 p-2 sm:p-4 rounded-lg text-white duration-1000 bg-cover hover:bg-[url('/brush.svg')]"
+        class="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-4 p-2 sm:p-4 rounded-lg text-white duration-1000 bg-cover hover:bg-[url('/brush.svg')] fade-in opacity-0"
       >
         Unidade de Valinhos
       </a>
 
       <a
         href="/hortolandia"
-        class="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-4 p-2 sm:p-4 rounded-lg text-white duration-1000 bg-cover hover:bg-[url('/brush.svg')]"
+        class="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-4 p-2 sm:p-4 rounded-lg text-white duration-1000 bg-cover hover:bg-[url('/brush.svg')] fade-in opacity-0"
       >
         Unidade de Hortolândia
       </a>
 
       <a
         href="/vinhedo"
-        class="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-4 p-2 sm:p-4 rounded-lg cursor-not-allowed text-white opacity-20 duration-1000 bg-cover"
+        class="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-4 p-2 sm:p-4 rounded-lg cursor-not-allowed text-white/10 duration-1000 bg-cover fade-in opacity-0"
       >
         Unidade de Vinhedo
       </a>
 
       <a
         href="/ecommerce"
-        class="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-4 p-2 sm:p-4 rounded-lg cursor-not-allowed text-white opacity-20 duration-1000 bg-cover"
+        class="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-4 p-2 sm:p-4 rounded-lg cursor-not-allowed text-white/10 duration-1000 bg-cover fade-in opacity-0"
       >
         Compre no E-commerce
       </a>

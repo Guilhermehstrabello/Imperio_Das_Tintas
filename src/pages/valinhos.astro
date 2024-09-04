@@ -1,7 +1,7 @@
 ---
 import Accordion from "../components/accordion.astro";
 import Footer from "../components/footer.astro";
-import Header from "../components/header.astro"
+import Header from "../components/header.astro";
 ---
 
 <!doctype html>
@@ -31,7 +31,7 @@ import Header from "../components/header.astro"
       html {
         scroll-behavior: smooth;
       }
-      body{
+      body {
         background-color: white;
       }
     </style>
@@ -74,7 +74,9 @@ import Header from "../components/header.astro"
         });
       </script>
 
-      <Header />
+      <Header
+        whatsappUrl="https://api.whatsapp.com/send?phone=5519995820350&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20seus%20produtos!!"
+      />
 
       <section class="bg-white">
         <div
@@ -113,7 +115,6 @@ import Header from "../components/header.astro"
           </div>
           <div class="flex-1 lg:flex lg:w-full">
             <img
-              
               src="/imagens/Hero.avif"
               alt="Mockup"
               width="600"
@@ -403,16 +404,20 @@ import Header from "../components/header.astro"
             class="bg-[#25D366] hover:bg-[#20c157] text-white py-3 px-3 rounded-full shadow-lg"
             aria-label="Whatsapp Flutuante"
           >
-            <img src="imagens/whatsapp.svg" alt="Whatsapp flutuante" class="w-full h-full"/>
+            <img
+              src="imagens/whatsapp.svg"
+              alt="Whatsapp flutuante"
+              class="w-full h-full"
+            />
           </button>
         </a>
       </div>
 
       <Footer
-    locationImage="/imagens/loja_valinhos.avif"
-    locationText="Av. dos Esportes, 500 - Vila Bissoto, Valinhos - SP, 13270-210"
-    locationUrl="https://www.google.com.br/maps/place/Imp%C3%A9rio+das+Tintas+Valinhos/@-22.9747084,-46.9989216,15z/data=!4m6!3m5!1s0x94c8cd668a50ed6b:0x42e37a903726a910!8m2!3d-22.9747084!4d-46.9989216!16s%2Fg%2F11syrmtn62?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D"
-  />
+        locationImage="/imagens/loja_valinhos.avif"
+        locationText="Av. dos Esportes, 500 - Vila Bissoto, Valinhos - SP, 13270-210"
+        locationUrl="https://www.google.com.br/maps/place/Imp%C3%A9rio+das+Tintas+Valinhos/@-22.9747084,-46.9989216,15z/data=!4m6!3m5!1s0x94c8cd668a50ed6b:0x42e37a903726a910!8m2!3d-22.9747084!4d-46.9989216!16s%2Fg%2F11syrmtn62?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D"
+      />
     </main>
   </body>
 </html>
