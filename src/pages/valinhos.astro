@@ -1,0 +1,418 @@
+---
+import Accordion from "../components/accordion.astro";
+import Footer from "../components/footer.astro";
+import Header from "../components/header.astro"
+---
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Script para alterar o rel para stylesheet após o carregamento -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const linkElement = document.getElementById("preload-css");
+        if (linkElement instanceof HTMLLinkElement) {
+          linkElement.rel = "stylesheet";
+        }
+      });
+    </script>
+    <link rel="preload" as="image" href="/imagens/Hero.avif" />
+    <link rel="icon" href="/favicon.svg" type="image/x-icon" />
+    <title>Império das Tintas</title>
+    <style>
+      @media (min-width: 768px) {
+        main {
+          margin: 0 100px;
+        }
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body{
+        background-color: white;
+      }
+    </style>
+    <!-- Google Tag Manager -->
+    <script is:inline defer>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-5PHHS7KR");
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        loading="lazy"
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5PHHS7KR"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
+    <main class="flex flex-col items-center justify-center min-h-screen px-4">
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          document
+            .querySelector('[data-collapse-toggle="navbar-cta"]')
+            .addEventListener("click", () => {
+              document
+                .getElementById("navbar-cta-mobile")
+                .classList.toggle("hidden");
+            });
+        });
+      </script>
+
+      <Header />
+
+      <section class="bg-white">
+        <div
+          class="xl:max-w-screen-2xl lg:max-w-screen-xl xl:py-8 py-10 space-y-4 mx-auto lg:py-16 flex flex-col lg:flex-row lg:items-center xl:gap-4"
+        >
+          <div>
+            <h1
+              class="xl:max-w-2xl mb-4 text-3xl xl:text-5xl lg:text-5xl font-bold tracking-tight leading-none text-[#262626]"
+            >
+              Transforme Seus Espaços <br /> com as <span
+                class="text-yellow-400"
+              >
+                Melhores Tintas
+              </span> e Acabamentos de Valinhos
+            </h1>
+            <p
+              class="max-w-2xl mb-6 font-light text-[#262626] lg:mb-8 md:text-base lg:text-xl"
+            >
+              Entregamos em até um <span class="text-blue-500 font-bold">
+                dia útil
+              </span>
+              caso você seja da <span class="text-blue-500 font-bold">
+                região de valinhos</span
+              >. Atendimento e produtos de excelência para o seu espaço.
+            </p>
+            <a
+              target="_blank"
+              href="https://api.whatsapp.com/send?phone=5519995820350&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20seus%20produtos!!"
+            >
+              <button
+                class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:scale-105 hover:bg-blue-800 duration-75"
+              >
+                Peça seu orçamento agora
+              </button>
+            </a>
+          </div>
+          <div class="flex-1 lg:flex lg:w-full">
+            <img
+              
+              src="/imagens/Hero.avif"
+              alt="Mockup"
+              width="600"
+              height="400"
+              class="sm:w-48 sm:h-auto md:w-64 md:h-auto lg:w-auto lg:h-auto"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="bg-[#FFE78B] max-w-screen-2xl flex flex-col py-12 px-4 lg:px-11 mt-44 rounded-3xl gap-5"
+      >
+        <h2 class="font-bold text-2xl lg:text-3xl text-center">
+          <span class="text-blue-600">Simplificamos </span> a escolha de tintas e
+          acabamentos para <br class="hidden lg:block" /> profissionais que buscam
+          <span class="text-blue-600">excelência</span>.
+        </h2>
+        <div
+          class="flex flex-col lg:flex-row gap-5 xl:gap-x-20 mt-6 justify-center items-center"
+        >
+          <div
+            class="bg-[#F5C201] text-black space-y-3 text-left p-8 flex flex-col justify-center max-w-80 h-64 w-full lg:w-auto rounded-xl hover:scale-110 duration-100"
+          >
+            <img
+              loading="lazy"
+              class="w-8 h-8 flex mx-auto"
+              src="/imagens/caminhao.svg"
+              alt=""
+            />
+            <h3 class="font-bold text-lg">Entrega em Até um Dia Útil</h3>
+            <p class="text-black w-full lg:w-72">
+              Garantimos que suas tintas e acabamentos cheguem até você
+              rapidamente, para que seus projetos nunca fiquem parados.
+            </p>
+          </div>
+          <div
+            class="bg-[#F5C201] text-black space-y-3 text-left p-8 flex flex-col justify-center max-w-80 h-64 w-full lg:w-auto rounded-xl hover:scale-110 duration-100"
+          >
+            <img
+              loading="lazy"
+              class="w-8 h-8 flex mx-auto"
+              src="/imagens/telefone.svg"
+              alt=""
+            />
+            <h3 class="font-bold text-lg">Atendimento Personalizado</h3>
+            <p class="text-black w-full lg:w-72">
+              Estamos prontos para oferecer um atendimento diferenciado,
+              ajudando você a encontrar as melhores soluções para suas
+              necessidades.
+            </p>
+          </div>
+          <div
+            class="bg-[#F5C201] text-black space-y-3 text-left p-8 flex flex-col justify-center max-w-80 h-64 w-full lg:w-auto rounded-xl hover:scale-110 duration-100"
+          >
+            <img
+              loading="lazy"
+              class="w-8 h-8 flex mx-auto"
+              src="/imagens/caixa.svg"
+              alt="Icone caixa"
+            />
+            <h3 class="font-bold text-lg">Produtos de Alta Qualidade</h3>
+            <p class="text-black w-full lg:w-72">
+              Trabalhamos com as melhores marcas do mercado, como a Sherwin
+              Williams, garantindo produtos de alta performance e durabilidade.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="flex flex-col my-8 justify-center items-center">
+        <a
+          target="_blank"
+          href="https://api.whatsapp.com/send?phone=5519995820350&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20seus%20produtos!!"
+        >
+          <button
+            class="text-white font-semibold flex justify-center items-center rounded-md px-5 py-4 h-12 w-52 bg-blue-700 hover:scale-105 hover:bg-blue-800 duration-75"
+          >
+            Entre em Contato
+          </button>
+        </a>
+      </div>
+
+      <section id="sobre" class="bg-white">
+        <div
+          class="items-center xl:px-6 lg:px-0 lg:-m-6 py-8 xl:max-w-screen-2xl grid-flow-col-dense lg:gap-x-10 lg:grid lg:grid-cols-2"
+        >
+          <div class="grid grid-cols-2 gap-4 mt-8">
+            <img
+              class="w-full h-full rounded-lg hover:scale-105 duration-150"
+              src="/imagens/1fotoloja.avif"
+              alt="office content 1"
+              width="full"
+              height="full"
+            />
+            <img
+              class="mt-4 w-full h-auto lg:mt-10 rounded-lg hover:scale-105 duration-150"
+              src="/imagens/2fotoloja.avif"
+              alt="office content 2"
+              width="full"
+              height="full"
+            />
+            <img
+              class="w-full h-full rounded-lg hover:scale-105 duration-150"
+              src="/imagens/3fotoloja.avif"
+              alt="office content 1"
+              width="full"
+              height="full"
+            />
+            <img
+              class="mt-4 w-full h-auto lg:mt-10 rounded-lg hover:scale-105 duration-150"
+              src="/imagens/4fotoloja.avif"
+              alt="office content 2"
+              width="full"
+              height="full"
+            />
+          </div>
+
+          <div
+            class="text-[#262626] lg:w-[540px] mt-10 flex flex-col space-y-5 text-lg"
+          >
+            <h3 class="text-3xl tracking-tight font-semibold text-blue-600">
+              Sobre Nós
+            </h3>
+            <h1 class="mb-5 text-3xl lg:text-5xl font-semibold text-yellow-400">
+              Prezamos por <br /> Qualidade
+            </h1>
+            <p class="mb-6 text-base lg:text-lg">
+              Fundada há apenas 3 anos, a Império das Tintas rapidamente se
+              consolidou como uma referência em qualidade e agilidade no setor.
+              Com a abertura de 4 lojas sendo duas em Vinhedo, uma em Valinhos e
+              uma em Hortolândia, nossa trajetória de crescimento é um reflexo
+              do comprometimento com nossos clientes e da confiança que
+              conquistamos no mercado.
+            </p>
+            <p class="mb-6 text-base lg:text-lg">
+              Guiados por valores de justiça, honestidade e excelência,
+              garantimos que cada projeto receba a atenção e os produtos de alta
+              qualidade que você merece. Estamos empenhados em continuar
+              inovando e expandindo para atender ainda melhor às necessidades de
+              nossos clientes.
+            </p>
+            <a
+              target="_blank"
+              href="https://api.whatsapp.com/send?phone=5519995820350&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20seus%20produtos!!"
+            >
+              <button
+                class="text-white font-semibold flex justify-center items-center rounded-md px-5 py-4 h-12 w-52 bg-blue-700 hover:scale-105 hover:bg-blue-800 duration-75"
+              >
+                Entre em Contato
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="flex flex-col justify-center items-center mx-auto my-20 gap-y-16"
+      >
+        <div class="space-y-10" id="porque">
+          <h2 class="text-2xl 2xl:text-3xl xl:text-3xl font-bold text-blue-600">
+            Revendedores oficiais da Sherwin Williams
+          </h2>
+          <div
+            class="bg-blue-700 flex justify-center items-center rounded-lg px-6 py-10"
+          >
+            <img
+              loading="lazy"
+              src="/imagens/SherwinWilliams.avif"
+              alt="Produtos Sherwin Williams"
+              class="w-[480px] h-auto hover:scale-110 duration-150"
+            />
+          </div>
+        </div>
+
+        <div
+          class="2xl:w-[1480px] xl:[1200px] lg:[1200px] sm:min-w-80 flex flex-col mt-40 space-y-10"
+          id="depoimentos"
+        >
+          <h2 class="text-2xl 2xl:text-3xl xl:text-3xl font-bold text-blue-600">
+            O que dizem sobre nós
+          </h2>
+          <div
+            class="flex flex-col gap-4 xl:flex-row lg:flex-row xl:flex-wrap xl:space-x-4"
+          >
+            <div
+              class="bg-blue-700 flex-1 max-w-xs p-6 rounded-md text-white hover:scale-105 duration-100"
+            >
+              <div class="flex items-center mb-2">
+                <span class="font-bold">Luis E. Watanabe</span>
+              </div>
+              <p>
+                Fomos atendidos muito bem pelo pessoal, perguntamos e tivemos
+                ótimas respostas nos produtos, etc..vale a pena conhecer e fazer
+                cotações...
+              </p>
+            </div>
+            <div
+              class="bg-blue-700 flex-1 max-w-xs p-6 rounded-md text-white hover:scale-105 duration-100"
+            >
+              <div class="flex items-center mb-2">
+                <span class="font-bold">Antonia Torssani Fini</span>
+              </div>
+              <p>
+                Atendimento ótimo. O Fernando já está no ramo há mais de 20
+                anos. Conhece e entende muito sobre tudo...
+              </p>
+            </div>
+            <div
+              class="bg-blue-700 flex-1 max-w-xs p-6 rounded-md text-white hover:scale-105 duration-100"
+            >
+              <div class="flex items-center mb-2">
+                <span class="font-bold">Maria Tempesta</span>
+              </div>
+              <p>
+                Show, ótimos preços, atendimento maravilhoso e perfeito, vale a
+                pena conhecer irão gostar muito. Parabéns pra toda equipe da
+                Império das tintas...
+              </p>
+            </div>
+            <div
+              class="bg-blue-700 flex-1 max-w-xs p-6 rounded-md text-white hover:scale-105 duration-100"
+            >
+              <div class="flex items-center mb-2">
+                <span class="font-bold">Daniel Bressanin</span>
+              </div>
+              <p>
+                Tinha tudo que eu precisava. Mas o maior destaque é o
+                atendimento. Nota 1000....
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="faq"
+        class="flex mt-16 flex-col gap-y-10 items-center justify-center"
+      >
+        <h2 class="text-4xl font-semibold text-blue-700 p-4">
+          Perguntas e Respostas
+        </h2>
+        <Accordion />
+      </section>
+
+      <section
+        id="contato"
+        class="relative 2xl:w-[1480px] xl:w-[1200px] mx-4 h-[600px] xl:p-0 my-20 mt-44 mb-44 flex flex-col gap-y-10 rounded-xl justify-center items-center bg-[#FFE78B] overflow-visible"
+      >
+        <img
+          loading="lazy"
+          src="imagens/balde.avif"
+          alt="Balde de Tinta"
+          class="absolute -top-20 left-1/2 transform -translate-x-1/2 w-32 md:w-40 lg:w-48 z-10"
+        />
+        <h2
+          class="xl:text-3xl md:text-2xl text-xl p-2 text-[#035AC1] text-center font-semibold mt-20"
+        >
+          Não Deixe a Tinta Secar e Venha Conhecer Uma de Nossas Lojas
+        </h2>
+        <p
+          class="text-lg xl:text-xl xl:max-w-[600px] max-w-80 text-center text-[#00387B] mt-4"
+        >
+          Na Império das Tintas, temos tudo o que você precisa para transformar
+          seus ambientes com muita cor e estilo. <br />Com a gente, seu projeto
+          ganha vida rapidinho!
+        </p>
+        <a
+          target="_blank"
+          href="https://api.whatsapp.com/send?phone=5519995820350&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20seus%20produtos!!"
+        >
+          <button
+            class="text-white font-semibold flex items-center justify-center rounded-md px-5 py-4 bg-blue-700 hover:scale-105 hover:bg-blue-800 duration-75 h-12 lg:min-w-80 w-auto"
+          >
+            Peça sua cotação agora!
+          </button>
+        </a>
+      </section>
+
+      <div class="fixed xl:bottom-6 xl:right-14 2xl:right-4 bottom-4 right-4">
+        <a
+          aria-label="Tire suas dúvidas ou compre pelo whatsapp"
+          target="_blank"
+          href="https://api.whatsapp.com/send?phone=5519995820350&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20seus%20produtos!!"
+        >
+          <button
+            class="bg-[#25D366] hover:bg-[#20c157] text-white py-3 px-3 rounded-full shadow-lg"
+            aria-label="Whatsapp Flutuante"
+          >
+            <img src="imagens/whatsapp.svg" alt="Whatsapp flutuante" class="w-full h-full"/>
+          </button>
+        </a>
+      </div>
+
+      <Footer
+    locationImage="/imagens/loja_valinhos.avif"
+    locationText="Av. dos Esportes, 500 - Vila Bissoto, Valinhos - SP, 13270-210"
+    locationUrl="https://www.google.com.br/maps/place/Imp%C3%A9rio+das+Tintas+Valinhos/@-22.9747084,-46.9989216,15z/data=!4m6!3m5!1s0x94c8cd668a50ed6b:0x42e37a903726a910!8m2!3d-22.9747084!4d-46.9989216!16s%2Fg%2F11syrmtn62?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D"
+  />
+    </main>
+  </body>
+</html>

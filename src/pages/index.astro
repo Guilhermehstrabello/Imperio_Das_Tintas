@@ -1,7 +1,79 @@
 ---
-import Layout from '../layouts/Layout.astro';
+const pageTitle = "Império das Tintas";
 ---
 
-<Layout>
-	
-</Layout>
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{pageTitle}</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.1/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Script para alterar o rel para stylesheet após o carregamento -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const linkElement = document.getElementById("preload-css");
+        if (linkElement instanceof HTMLLinkElement) {
+          linkElement.rel = "stylesheet";
+        }
+      });
+    </script>
+    <link rel="preload" as="image" href="/imagens/Hero.avif" />
+    <link rel="icon" href="/favicon.svg" type="image/x-icon" />
+  </head>
+  <body
+    class="bg-[#035AC1] m-0 font-sans flex items-center justify-center h-screen"
+  >
+    <div
+      class="relative w-full h-full flex flex-col items-center justify-center p-4 sm:p-8"
+    >
+      <!-- Bordas -->
+      <div class="absolute top-0 left-0 w-24 md:w-32 lg:w-40">
+        <img src="imagens/brush1.svg" alt="Brush1">
+      </div>
+
+      <div class="absolute top-0 right-0 w-24 md:w-32 lg:w-40">
+        <img src="imagens/brush2.svg" alt="Brush2">
+      </div>
+      <div class="absolute bottom-0 left-0 w-24 md:w-32 lg:w-40">
+        <img src="imagens/brush2.svg" alt="Brush2">
+      </div>
+
+      <div class="absolute bottom-0 right-0 w-24 md:w-32 lg:w-40">
+        <img src="imagens/brush3.svg" alt="Brush3">
+      </div>
+
+      <!-- Links com imagem de fundo ao passar o mouse -->
+      <a
+        href="/valinhos"
+        class="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-4 p-2 sm:p-4 rounded-lg text-white duration-1000 bg-cover hover:bg-[url('/brush.svg')]"
+      >
+        Unidade de Valinhos
+      </a>
+
+      <a
+        href="/hortolandia"
+        class="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-4 p-2 sm:p-4 rounded-lg text-white duration-1000 bg-cover hover:bg-[url('/brush.svg')]"
+      >
+        Unidade de Hortolândia
+      </a>
+
+      <a
+        href="/vinhedo"
+        class="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-4 p-2 sm:p-4 rounded-lg cursor-not-allowed text-white opacity-20 duration-1000 bg-cover"
+      >
+        Unidade de Vinhedo
+      </a>
+
+      <a
+        href="/ecommerce"
+        class="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-4 p-2 sm:p-4 rounded-lg cursor-not-allowed text-white opacity-20 duration-1000 bg-cover"
+      >
+        Compre no E-commerce
+      </a>
+    </div>
+  </body>
+</html>
