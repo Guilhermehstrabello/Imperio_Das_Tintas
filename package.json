@@ -13,6 +13,7 @@
     "@astrojs/partytown": "^2.1.1",
     "@astrojs/tailwind": "^5.1.0",
     "@playform/inline": "^0.1.0",
+    "@tailwindcss/line-clamp": "^0.4.4",
     "astro": "^4.14.2",
     "astro-imagetools": "^0.2.7",
     "astro-lenis": "^1.0.0",
