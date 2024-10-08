@@ -80,7 +80,7 @@ import Header from "../components/header.astro";
 
       <section class="bg-white">
         <div
-          class="items-center justify-center xl:max-w-screen-2xl lg:max-w-screen-xl xl:py-8 py-10 space-y-6 mx-auto lg:py-16 flex flex-col lg:items-center xl:gap-4"
+          class="items-center justify-center xl:max-w-screen-2xl lg:max-w-screen-xl xl:py-8 py-10 space-y-6 mx-auto lg:py-16 flex flex-col lg:items-center xl:gap-4 relative z-10"
         >
           <div class="flex flex-col items-center justify-center">
             <h1
@@ -110,23 +110,24 @@ import Header from "../components/header.astro";
                 Tenho interesse!
               </button>
             </a>
+            <img src="/public/imagens/Balde.png" alt="" />
           </div>
         </div>
       </section>
 
       <section
-        class="max-w-screen-2xl flex flex-col py-12 lg:px-11 mt-44 rounded-3xl gap-5"
+        class="max-w-screen-2xl flex flex-col py-12 lg:px-11 mt-16 rounded-3xl gap-5"
       >
         <h2 class="font-bold text-xl lg:text-3xl text-center">
           <span class="text-blue-600">Colorindo sonhos </span> com facilidade: Sua
-          <span class="text-blue-600">parceira local</span>. sonhos com
+          <span class="text-blue-600">parceira local</span> sonhos com
           facilidade: Sua parceira local para tintas que fazem a diferença!
         </h2>
         <div
-          class="flex flex-col lg:flex-row gap-5 xl:gap-x-20 mt-6 justify-center items-center"
+          class="flex flex-col gap-5 xl:gap-x-20 mt-6 justify-center items-center"
         >
           <div
-            class="bg-[#035AC1] text-[#FFEBA1] space-y-3 text-left p-8 flex flex-col justify-center max-w-80 h-64 w-full lg:w-auto rounded-xl hover:scale-110 duration-100"
+            class="bg-[#035AC1] text-[#FFEBA1] space-y-3 text-center p-8 flex flex-col justify-center max-w-[972px] h-64 w-[450px] lg:w-[970px] rounded-xl hover:scale-110 duration-100"
           >
             <svg
               class="mx-auto"
@@ -149,14 +150,18 @@ import Header from "../components/header.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"></path>
             </svg>
-            <h3 class="font-bold text-lg">Entrega em Até um Dia Útil</h3>
-            <p class="text-[#FFEBA1] w-full lg:w-72">
+            <h3 class="font-bold text-2xl lg:text-3xl">
+              Entrega em Até um Dia Útil
+            </h3>
+            <p
+              class="text-[#FFEBA1] text-lg lg:text-2xl w-full lg:w-[782px] mx-auto"
+            >
               Garantimos que suas tintas e acabamentos cheguem até você
               rapidamente, para que seus projetos nunca fiquem parados.
             </p>
           </div>
           <div
-            class="bg-[#035AC1] text-[#FFEBA1] space-y-3 text-left p-8 flex flex-col justify-center max-w-80 h-64 w-full lg:w-auto rounded-xl hover:scale-110 duration-100"
+            class="bg-[#035AC1] text-[#FFEBA1] space-y-3 text-center p-8 flex flex-col justify-center max-w-[972px] h-64 w-[450px] lg:w-[970px] rounded-xl hover:scale-110 duration-100"
           >
             <svg
               class="mx-auto"
@@ -170,15 +175,20 @@ import Header from "../components/header.astro";
                 d="M12.0689 17.0886C11.4498 13.0033 14.3325 9.32755 18.7363 7.9788C19.5182 7.73949 20.3619 7.80749 21.0954 8.16895C21.8289 8.53041 22.3968 9.15808 22.6834 9.92393L24.0955 13.6939C24.3225 14.3004 24.3633 14.9608 24.2124 15.5905C24.0616 16.2202 23.726 16.7906 23.2489 17.2283L19.0483 21.0812C18.8407 21.2712 18.6861 21.5119 18.5995 21.7797C18.5129 22.0474 18.4973 22.3331 18.5543 22.6087L18.5916 22.7777L18.6956 23.2018C18.7883 23.5593 18.928 24.0631 19.1246 24.6643C19.5146 25.8587 20.137 27.4642 21.0633 29.0681C21.9895 30.6719 23.0685 32.0142 23.907 32.9486C24.3441 33.4347 24.8005 33.9031 25.2753 34.3526L25.4053 34.4728C25.6154 34.6589 25.8701 34.7874 26.1446 34.8457C26.4191 34.9041 26.7041 34.8904 26.9718 34.8059L32.409 33.0948C33.0268 32.9006 33.6885 32.8954 34.3092 33.0798C34.93 33.2643 35.4815 33.6299 35.893 34.1299L38.4654 37.2532C39.5379 38.5532 39.4111 40.4642 38.1778 41.6131C34.8075 44.7542 30.173 45.3993 26.949 42.8058C22.9982 39.6176 19.6669 35.7305 17.121 31.3382C14.5565 26.9474 12.8425 22.1142 12.0689 17.0886ZM21.9586 22.8216L25.4459 19.6236C26.4002 18.7481 27.0712 17.6074 27.3729 16.348C27.6746 15.0885 27.5932 13.7677 27.1391 12.5548L25.7254 8.7848C25.1486 7.24451 24.0061 5.98216 22.5309 5.25508C21.0556 4.528 19.3585 4.39093 17.7856 4.8718C12.3175 6.54718 7.92676 11.4498 8.85626 17.5744C9.69064 23.005 11.5413 28.2296 14.3114 32.9746C17.0573 37.7112 20.6503 41.9029 24.9113 45.3408C29.7456 49.2246 36.2034 47.9002 40.3943 43.9921C41.5941 42.8748 42.3223 41.3417 42.4301 39.7058C42.5379 38.0699 42.0172 36.4545 40.9744 35.1894L38.402 32.0662C37.5788 31.0659 36.4756 30.3343 35.2337 29.9654C33.9919 29.5966 32.6681 29.6072 31.4324 29.9959L26.9198 31.4162C26.7177 31.2085 26.52 30.9966 26.3266 30.7808C25.3989 29.755 24.5783 28.6372 23.8778 27.4447C23.195 26.2415 22.6368 24.9718 22.2121 23.6552C22.1219 23.3796 22.0374 23.1022 21.9586 22.8232"
                 fill="#FFEBA2"></path>
             </svg>
-            <h3 class="font-bold text-lg">Atendimento Personalizado</h3>
-            <p class="text-[#FFEBA1] w-full lg:w-72">
+
+            <h3 class="font-bold text-2xl lg:text-3xl">
+              Atendimento Personalizado
+            </h3>
+            <p
+              class="text-[#FFEBA1] text-lg lg:text-2xl w-full lg:w-[782px] mx-auto"
+            >
               Estamos prontos para oferecer um atendimento diferenciado,
               ajudando você a encontrar as melhores soluções para suas
               necessidades.
             </p>
           </div>
           <div
-            class="bg-[#035AC1] text-[#FFEBA1] space-y-3 text-left p-8 flex flex-col justify-center max-w-80 h-64 w-full lg:w-auto rounded-xl hover:scale-110 duration-100"
+            class="bg-[#035AC1] text-[#FFEBA1] space-y-3 text-center p-8 flex flex-col justify-center max-w-[972px] h-64 w-[450px] lg:w-[970px] rounded-xl hover:scale-110 duration-100"
           >
             <svg
               class="mx-auto"
@@ -218,8 +228,13 @@ import Header from "../components/header.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"></path>
             </svg>
-            <h3 class="font-bold text-lg">Produtos de Alta Qualidade</h3>
-            <p class="text-[#FFEBA1] w-full lg:w-72">
+
+            <h3 class="font-bold text-2xl lg:text-3xl">
+              Produtos de Alta Qualidade
+            </h3>
+            <p
+              class="text-[#FFEBA1] text-lg lg:text-2xl w-full lg:w-[782px] mx-auto"
+            >
               Trabalhamos com as melhores marcas do mercado, como a Sherwin
               Williams, garantindo produtos de alta performance e durabilidade.
             </p>
@@ -240,43 +255,12 @@ import Header from "../components/header.astro";
         </a>
       </div>
 
-      <section id="sobre" class="bg-white">
+      <section id="sobre" class="bg-white flex justify-center">
         <div
-          class="items-center xl:px-6 lg:px-0 lg:-m-6 py-8 xl:max-w-screen-2xl grid-flow-col-dense lg:gap-x-10 lg:grid lg:grid-cols-2"
+          class="items-center justify-center flex flex-col space-y-10 xl:px-6 lg:px-0 lg:-m-6 py-8 xl:max-w-screen-2xl"
         >
-          <div class="grid grid-cols-2 gap-4 mt-8">
-            <img
-              class="w-full h-full rounded-lg hover:scale-105 duration-150"
-              src="/imagens/1fotoloja.avif"
-              alt="office content 1"
-              width="full"
-              height="full"
-            />
-            <img
-              class="mt-4 w-full h-auto lg:mt-10 rounded-lg hover:scale-105 duration-150"
-              src="/imagens/2fotoloja.avif"
-              alt="office content 2"
-              width="full"
-              height="full"
-            />
-            <img
-              class="w-full h-full rounded-lg hover:scale-105 duration-150"
-              src="/imagens/3fotoloja.avif"
-              alt="office content 1"
-              width="full"
-              height="full"
-            />
-            <img
-              class="mt-4 w-full h-auto lg:mt-10 rounded-lg hover:scale-105 duration-150"
-              src="/imagens/4fotoloja.avif"
-              alt="office content 2"
-              width="full"
-              height="full"
-            />
-          </div>
-
           <div
-            class="text-[#262626] lg:w-[540px] mt-10 flex flex-col space-y-5 text-lg"
+            class="text-[#262626] xl:w-[1200px] mt-10 flex flex-col space-y-5 text-lg"
           >
             <h3 class="text-3xl tracking-tight font-semibold text-blue-600">
               Sobre Nós
@@ -304,11 +288,33 @@ import Header from "../components/header.astro";
               href="https://api.whatsapp.com/send?phone=5519995820350&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20seus%20produtos!!"
             >
               <button
-                class="text-white font-semibold flex justify-center items-center rounded-md px-5 py-4 h-12 w-52 bg-blue-700 hover:scale-105 hover:bg-blue-800 duration-75"
+                class="text-white font-semibold flex justify-center items-center rounded-md mx-auto px-5 py-4 h-12 w-52 bg-blue-700 hover:scale-105 hover:bg-blue-800 duration-75"
               >
                 Entre em Contato
               </button>
             </a>
+          </div>
+          <div class="grid grid-cols-2 gap-4 mt-8 max-w-[1024px] px-10">
+            <img
+              class="w-full h-full rounded-lg hover:scale-105 duration-150"
+              src="/imagens/vinhedo4.png"
+              alt="office content 1"
+            />
+            <img
+              class="mt-4 w-full h-auto lg:mt-10 rounded-lg hover:scale-105 duration-150"
+              src="/imagens/vinhedo2.png"
+              alt="office content 2"
+            />
+            <img
+              class="w-full h-full rounded-lg hover:scale-105 duration-150"
+              src="/imagens/vinhedo3.png"
+              alt="office content 1"
+            />
+            <img
+              class="mt-4 w-[900px] h-auto lg:mt-10 rounded-lg hover:scale-105 duration-150"
+              src="/imagens/vinhedo1.png"
+              alt="office content 2"
+            />
           </div>
         </div>
       </section>
@@ -404,32 +410,26 @@ import Header from "../components/header.astro";
 
       <section
         id="contato"
-        class="relative 2xl:w-[1480px] xl:w-[1200px] mx-4 h-[600px] xl:p-0 my-20 mt-44 mb-44 flex flex-col gap-y-10 rounded-xl justify-center items-center bg-[#FFE78B] overflow-visible"
+        class="2xl:w-[1480px] xl:w-[1200px] mx-4 h-[600px] xl:p-0 my-20 flex flex-col gap-y-10 rounded-xl py-4 justify-center items-center bg-[#035AC1] overflow-visible"
       >
-        <img
-          loading="lazy"
-          src="imagens/balde.avif"
-          alt="Balde de Tinta"
-          class="absolute -top-20 left-1/2 transform -translate-x-1/2 w-32 md:w-40 lg:w-48 z-10"
-        />
         <h2
-          class="xl:text-3xl md:text-2xl text-xl p-2 text-[#035AC1] text-center font-semibold mt-20"
+          class="xl:text-5xl md:text-2xl text-xl p-2 text-[#FFE78B] text-center font-semibold"
         >
-          Não Deixe a Tinta Secar e Venha Conhecer Uma de Nossas Lojas
+          Renovar Seu Ambiente Nunca Foi Tão Fácil
         </h2>
         <p
-          class="text-lg xl:text-xl xl:max-w-[600px] max-w-80 text-center text-[#00387B] mt-4"
+          class="text-md xl:text-2xl xl:max-w-[640px] max-w-80 text-center text-white"
         >
           Na Império das Tintas, temos tudo o que você precisa para transformar
-          seus ambientes com muita cor e estilo. <br />Com a gente, seu projeto
-          ganha vida rapidinho!
+          seus ambientes com muita cor e estilo. Com a gente, seu projeto ganha
+          vida rapidinho!
         </p>
         <a
           target="_blank"
           href="https://api.whatsapp.com/send?phone=5519995820350&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20seus%20produtos!!"
         >
           <button
-            class="text-white font-semibold flex items-center justify-center rounded-md px-5 py-4 bg-blue-700 hover:scale-105 hover:bg-blue-800 duration-75 h-12 lg:min-w-80 w-auto"
+            class="text-[#035AC1] font-semibold flex items-center justify-center rounded-md px-5 py-4 bg-[#FFE78B] hover:scale-105 hover:bg-[#ffda45] duration-75 h-12 lg:min-w-80 w-auto"
           >
             Peça sua cotação agora!
           </button>
